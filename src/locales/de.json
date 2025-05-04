@@ -7,11 +7,113 @@
   },
   "home": {
     "headline": "Hallo, ich bin Timo Achtelik",
-    "subline": "Freelancer für Webentwicklung & technische Beratung"
+    "subline": "Freelancer für Webentwicklung & technische Beratung",
+    "skills": {
+      "headline": "Fähigkeiten"
+    }
   },
   "services": {
     "title": "Leistungen",
-    "dev": "Moderne Webentwicklung",
-    "consulting": "Technische Projektberatung"
+    "webdev": {
+      "title": "Moderne Webentwicklung",
+      "description": "Moderne, responsive Webanwendungen mit Vue.js, React und anderen zukunftsweisenden Technologien. Leistungsoptimierte und nutzerorientierte Lösungen für Unternehmen jeder Größe.",
+      "skill_spa": "Single Page Application (SPA)",
+      "skill_pwa": "Progressive Web Apps (PWA)",
+      "skill_responsiveDesign": "Responsive & Mobile-First Design",
+      "skill_performance": "Performance-Optimierung"
+    },
+    "consulting": {
+      "title": "Technische Projektberatung",
+      "description": "Strategische technische Beratung für Ihre Projekte. Von der Architekturplanung bis zu Implementierungsstrategien helfe ich Ihnen, fundierte technische Entscheidungen zu treffen.",
+      "skill_architecture_planning": "Technische Architekturplanung",
+      "skill_codeQA": "Code-Reviews & Qualitätssicherung",
+      "skill_stackSelection": "Auswahl der Technologie-Stack",
+      "skill_developerTraining": "Entwickler-Training & Mentoring"
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "Nutzerzentriertes Design, das nicht nur schön aussieht, sondern auch ein außergewöhnliches Benutzererlebnis bietet. Intuitive Schnittstellen, die ansprechen und überzeugen.",
+      "skill_uiDesign": "User Interface (UI) Design",
+      "skill_uxResearch": "User Experience (UX) Research",
+      "skill_seoOptimization": "SEO (Suchmaschinenoptimierung)",
+      "skill_uiTesting": "Usability-Tests"
+    },
+    "performance": {
+      "title": "Performance-Optimierung",
+      "description": "Steigern Sie die Geschwindigkeit und Effizienz Ihrer Website. Schnellere Ladezeiten, reibungslosere Interaktionen und optimierter Code für bessere Benutzererfahrung und SEO.",
+      "skill_web": "Web Vitals Optimierung",
+      "skill_asset": "Asset-Optimierung",
+      "skill_caching": "Caching-Strategien",
+      "skill_mentoring": "Performance-Monitoring"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Haben Sie Fragen oder ein Projekt? Schreiben Sie mir eine Nachricht und ich melde mich so schnell wie möglich bei Ihnen.",
+    "button_text": "Kontaktieren Sie mich",
+    "email": "E-Mail",
+    "emailDescription": "Für direkte Anfragen oder Projektvorschläge:",
+    "response": "Antwortzeit",
+    "responseDescription": "Ich antworte in der Regel innerhalb von 24 Stunden an Werktagen.",
+    "formTitle": "Kontaktformular",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "ihre-email@example.com",
+    "subject": "Betreff",
+    "subjectPlaceholder": "Betreff Ihrer Nachricht",
+    "message": "Nachricht",
+    "messagePlaceholder": "Ihre Nachricht...",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei Ihnen melden.",
+    "errorMessage": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail."
+  },
+  "footer": {
+    "description": "Professionelle Webentwicklung und technische Beratung für Ihre individuellen Projekte.",
+    "links": "Links",
+    "legal": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "about": {
+    "title": "Über mich", 
+     "intro": {
+      "title": "Einleitung", 
+      "content1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "content2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+    },
+    "experience": { 
+      "title": "Berufserfahrung", 
+      "jobs": {
+        "job1": {
+          "title": "Senior Software Engineer",
+          "company": "BAYOOTEC GmbH",
+          "period": "2024 - Heute",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        "job2": {
+          "title": "Junior Software Engineer",
+          "company": "BAYOOTEC GmbH",
+          "period": "2023 - 2024",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        }
+      }
+    },
+    "education": { 
+      "title": "Ausbildung", 
+      "edu1": {
+        "degree": "Master of Computer Science",
+        "school": "Hochschule Darmstadt",
+        "period": "2020 - 2023",
+        "description": "Masterstudium Informatik mit Schwerpunkt Software Engineering. Fokus auf Softwarearchitektur, Systementwicklung und praxisorientierten Projekten. Ergänzt durch theoretische Vertiefungen und überfachliche Kompetenzen. Abschluss: Master of Science."
+      },
+      "edu2": {
+        "degree": "Bachelor of Computer Science",
+        "school": "Hochschule Darmstadt",
+        "period": "2016 - 2020",
+        "description": "Informatikstudium mit Schwerpunkt auf Kommunikation, Medien und Softwareentwicklung. Kombination aus technischer IT-Kompetenz, Mediengestaltung und interkulturellen Aspekten. Praxisorientiert durch Projekte, Wahlmodule und Praxisphase. Abschluss: Bachelor of Science."
+      }
+    }
   }
 }

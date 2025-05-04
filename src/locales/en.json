@@ -7,11 +7,146 @@
   },
   "home": {
     "headline": "Hi, I'm Timo Achtelik",
-    "subline": "Freelancer for Web Development & Technical Consulting"
+    "subline": "Freelancer for Web Development & Technical Consulting",
+    "skills": {
+      "headline": "Skills",
+      "vue": "Vue.js"
+    }
   },
   "services": {
     "title": "Services",
-    "dev": "Modern Web Development",
-    "consulting": "Technical Project Consulting"
+    "webdev": {
+      "title": "Modern Web Development",
+      "description": "Modern, responsive web applications using Vue.js, React and other cutting-edge technologies. Performance optimized and user-focused solutions for businesses of all sizes.",
+      "skill_spa":"Single Page Application (SPA)",
+      "skill_pwa": "Progressive Web Apps (PWA)",
+      "skill_responsiveDesign": "Responsive & Mobile-First Design",
+      "skill_performance": "Performance Optimization"
+    },
+    "consulting": {
+      "title": "Technical Project Consulting",
+      "description": "Strategic technical guidance for your projects. From architecture planning to implementation strategies, I'll help you make informed technical decisions.",
+      "skill_architecture_planning": "Technical Architecture Planning",
+      "skill_codeQA": "Code Reviews & Quality Assurance",
+      "skill_stackSelection": "Technology Stack Selection",
+      "skill_developerTraining": "Developer Training & Mentoring"
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "User-centered design that not only looks beautiful but also delivers an exceptional user experience. Intuitive interfaces that engage and convert.",
+      "skill_uiDesign": "User Interface (UI) Design",
+      "skill_uxResearch": "User Experience (UX) Research",
+      "skill_seoOptimization": "SEO (Search Engine Optimization)",
+      "skill_uiTesting": "Usability Testing"
+      },
+    "performance": {
+      "title": "Performance Optimization",
+      "description": "Boost your website's speed and efficiency. Faster loading times, smoother interactions, and optimized code for better user experience and SEO.",
+      "skill_web": "Web Vitals Optimization",
+      "skill_asset": "Asset Optimization",
+      "skill_caching": "Caching Strategies",
+      "skill_mentoring": "Performance Monitoring"
+    }
+},
+  "contact": {
+    "title": "Contact",
+    "description": "Do you have questions or a project? Send me a message and I'll get back to you as soon as possible.",
+    "button_text": "Contact me",
+    "email": "Email",
+    "emailDescription": "For direct inquiries or project proposals:",
+    "response": "Response Time",
+    "responseDescription": "I typically respond within 24 hours on business days.",
+    "formTitle": "Contact Form",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your-email@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Subject of your message",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "successMessage": "Thank you! Your message has been successfully sent. I will get back to you as soon as possible.",
+    "errorMessage": "An error occurred. Please try again later or contact me directly via email."
+  },
+  "footer": {
+    "description": "Professional web development and technical consulting for your individual projects.",
+    "links": "Links",
+    "legal": "Legal",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved."
+  },
+  "imprint": {
+    "title": "Imprint",
+    "legalBasisHeading": "Information according to § 5 TMG",
+    "providerName": "[Your Full Name]",
+    "providerStreet": "[Your Street and House Number]",
+    "providerZipCity": "[Your Postal Code and City]",
+    "contact": {
+      "heading": "Contact",
+      "emailLabel": "Email",
+      "emailAddress": "[Your Email Address, e.g., info@example.com]"
+    },
+    "disclaimerHeading": "Disclaimers",
+    "linkLiabilityHeading": "Liability for Links",
+    "linkLiabilityText": "Our offer contains links to external third-party websites over whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. A permanent content control of the linked pages is not reasonable without concrete evidence of a legal violation. If we become aware of legal violations, we will remove such links immediately.",
+    "copyrightHeading": "Copyright",
+    "copyrightText": "The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. Insofar as the content on this page was not created by the operator, the copyrights of third parties are respected. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of legal violations, we will remove such content immediately."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "responsibleHeading": "Responsible Party",
+    "responsibleText": "The responsible party for data processing on this website is:<br />[Your Full Name]<br />[Your Full Address as in Impressum]",
+    "dataCollectionHeading": "Data Collection on this Website",
+    "dataCollectionText": "When you visit this website, your browser automatically sends information to the server of our website's host. This information is temporarily stored in server log files. The following information may be collected without your intervention and stored until automated deletion:\n<ul>\n  <li>Browser type and version</li>\n  <li>Operating system used</li>\n  <li>Referrer URL (the previously visited page)</li>\n  <li>Hostname of the accessing computer</li>\n  <li>Time of the server request</li>\n  <li>IP address</li>\n</ul>\nThis data is processed for the purpose of delivering the content of our website correctly, optimizing the content, ensuring the long-term viability of our IT systems and website technology, and providing law enforcement authorities with the information necessary for criminal prosecution in case of a cyberattack.<br />The legal basis for this processing is Art. 6(1)(f) GDPR (legitimate interest). Our legitimate interest is the technical administration and display of our website. This data is generally deleted after [Specify a time period, e.g., 7 days] unless required for specific security incidents.",
+    "cookiesHeading": "Cookies",
+    "cookiesText": "Our website may use cookies. Cookies are small text files that are stored on your device by your browser. They are used to make our website more user-friendly, effective, and secure.<br />[**Crucially, explain *what* cookies are used for.** Examples:]<br />- We use cookies solely for functional purposes, such as remembering your dark mode preference.<br />- We do not use any tracking cookies.<br />[If you use *any* analytics or persistent cookies, you need much more detail here and likely a cookie banner/consent mechanism.]<br />You can configure your browser to inform you about the placement of cookies and allow cookies only in individual cases, to exclude the acceptance of cookies for certain cases or in general, and to activate the automatic deletion of cookies when closing the browser. Disabling cookies may limit the functionality of this website.",
+    "thirdPartiesHeading": "Third-Party Services",
+    "thirdPartiesText": "We may use third-party services on this website. When you visit a page using such a service, information may be transferred to the third party.<br />[**CRITICAL:** List every third-party service you use and link to their privacy policy. Examples:]<br />- **Google Fonts:** We use Google Fonts for displaying consistent fonts. Google may collect and process data about your use of fonts. See Google's privacy policy: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline hover:no-underline\">https://policies.google.com/privacy</a><br />- [Add details for any other services: e.g., embedded YouTube videos, social media links/buttons (even simple links can transfer data), analytics services (Google Analytics, etc. - requires much more detail and consent!), contact forms, etc.]",
+    "rightsHeading": "Your Data Protection Rights",
+    "rightsText": "You have the right to request information about your stored personal data, its origin, its recipients, and the purpose of its collection at no charge. You also have the right to request its correction, blocking, or deletion.<br />Furthermore, you have the right to request the restriction of processing your personal data, the right to object to processing, and the right to data portability.<br />To do so or if you have further questions about personal data, you can contact us at any time using the contact information provided in the Imprint.<br />You also have the right to lodge a complaint with the competent supervisory authority. The competent supervisory authority for data protection matters in Germany is the State Data Protection Commissioner of the federal state in which our company is based.",
+    "contactHeading": "Contact for Privacy Concerns",
+    "contactText": "If you have questions regarding the collection, processing, or use of your personal data, for information, correction, blocking, or deletion of data, or revocation of granted consent, please contact us using the email address provided in the Imprint:<br /><a href=\"mailto:[Your Email Address]\" class=\"underline hover:no-underline\">[Your Email Address]</a>"
+  },
+  "about": {
+    "title": "About Me", 
+    "intro": {
+      "title": "Introduction", 
+      "content1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "content2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+    },
+    "experience": { 
+      "title": "Experience", 
+      "jobs": {
+        "job1": {
+          "title": "Senior Software Engineer",
+          "company": "BAYOOTEC GmbH",
+          "period": "2024 - Present",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        "job2": {
+          "title": "Junior Software Engineer",
+          "company": "BAYOOTEC GmbH",
+          "period": "2023 - 2024",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        }
+      }
+    },
+    "education": { 
+       "title": "Education", 
+      "edu1": {
+        "degree": "Master of Computer Science",
+        "school": "University of Applied Sciences Darmstadt",
+        "period": "2020 - 2023",
+        "description": "Master's degree in Computer Science with a focus on Software Engineering. Focus on software architecture, system development, and practical projects. Supplemented by theoretical deepening and interdisciplinary skills. Degree: Master of Science."
+      },
+      "edu2": {
+        "degree": "Bachelor of Computer Science",
+        "school": "University of Applied Sciences Darmstadt",
+        "period": "2016 - 2020",
+        "description": "Computer Science degree with a focus on Communication, Media, and Software Development. Combination of technical IT competence, media design, and intercultural aspects. Practice-oriented through projects, elective modules, and practical phase. Degree: Bachelor of Science."
+      }
+    }
   }
 }

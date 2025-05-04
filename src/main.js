@@ -6,6 +6,8 @@ import router from './router'
 import './assets/main.css';
 
 const i18n = createI18n({
+  legacy: false, 
+  globalInjection: true,
   locale: 'de',
   fallbackLocale: 'en',
   messages,
