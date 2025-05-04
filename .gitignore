@@ -1,0 +1,37 @@
+# Node modules
+/node_modules/
+
+# Vite build output
+/dist/
+
+# Vite cache
+/.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment variable files
+.env
+.env.*.local
+
+# IDE/Editor folder configurations
+.idea/
+.vscode/
+
+# Mac specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# Optional npm cache directory
+.npm/
+
+# Dependency directories (for Yarn users)
+.pnp/
+.pnp.js
+
+# JetBrains IDEs (IntelliJ IDEA, WebStorm, etc.)
+.idea/
