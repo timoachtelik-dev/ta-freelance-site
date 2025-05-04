@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "headline": "Hi, I'm Timo Achtelik",
+    "subline": "Freelancer for Web Development & Technical Consulting"
+  },
+  "services": {
+    "title": "Services",
+    "dev": "Modern Web Development",
+    "consulting": "Technical Project Consulting"
+  }
+}

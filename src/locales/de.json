@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "about": "Über mich",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "headline": "Hallo, ich bin Timo Achtelik",
+    "subline": "Freelancer für Webentwicklung & technische Beratung"
+  },
+  "services": {
+    "title": "Leistungen",
+    "dev": "Moderne Webentwicklung",
+    "consulting": "Technische Projektberatung"
+  }
+}
