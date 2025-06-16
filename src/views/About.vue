@@ -50,7 +50,7 @@
           <h2 class="text-2xl font-semibold text-primary dark:text-accent mb-6">{{ $t('about.education.title') }}</h2>
           
           <div class="space-y-6">
-            <div v-for="edu in localizedEducation" :key="edu.degree" class="bg-white dark:bg-secondary/80 rounded-xl shadow-lg p-6 transition-all hover:shadow-xl">
+            <div v-for="(edu, index) in localizedEducation" :key="index" class="bg-white dark:bg-secondary/80 rounded-xl shadow-lg p-6 transition-all hover:shadow-xl">
               <div class="flex flex-col md:flex-row justify-between md:items-center">
                 <h3 class="text-xl font-semibold text-secondary dark:text-background">{{ edu.degree }}</h3>
                 <span class="text-accent font-medium mt-1 md:mt-0">{{ edu.period }}</span>
