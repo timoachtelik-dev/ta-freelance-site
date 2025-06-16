@@ -12,39 +12,40 @@
       "headline": "Fähigkeiten"
     }
   },
-  "services": {
+   "services": {
     "title": "Leistungen",
-    "webdev": {
-      "title": "Moderne Webentwicklung",
-      "description": "Moderne, responsive Webanwendungen mit Vue.js, React und anderen zukunftsweisenden Technologien. Leistungsoptimierte und nutzerorientierte Lösungen für Unternehmen jeder Größe.",
-      "skill_spa": "Single Page Application (SPA), die ein nahtloses, desktopähnliches Benutzererlebnis bieten",
-      "skill_pwa": "Progressive Web Apps (PWA)",
-      "skill_responsiveDesign": "Responsive & Mobile-First Design",
-      "skill_performance": "Performance-Optimierung"
+    "subtitle": "Ich biete eine Reihe von Dienstleistungen an, um Ihre digitalen Produkte zum Leben zu erwecken – vom ersten Konzept bis zur Bereitstellung und darüber hinaus.",
+    "fullstack": {
+      "title": "Full-Stack Webentwicklung",
+      "description": "Erstellung kompletter, robuster und skalierbarer Webanwendungen von der Datenbank bis zur Benutzeroberfläche unter Verwendung moderner und bewährter Technologien.",
+      "skill_frontend": "Frontend-Entwicklung (Vue.js, Nuxt.js, TypeScript, Angular)",
+      "skill_backend": "Backend-Entwicklung (Node.js, C#/.NET, Java)",
+      "skill_database": "Datenbankarchitektur & -verwaltung (SQL)",
+      "skill_testing": "Unit- & End-to-End-Tests"
     },
     "consulting": {
-      "title": "Technische Projektberatung",
-      "description": "Strategische technische Beratung für Ihre Projekte. Von der Architekturplanung bis zu Implementierungsstrategien helfe ich Ihnen, fundierte technische Entscheidungen zu treffen.",
-      "skill_architecture_planning": "Technische Architekturplanung",
-      "skill_codeQA": "Code-Reviews & Qualitätssicherung",
-      "skill_stackSelection": "Auswahl der Technologie-Stack",
-      "skill_developerTraining": "Entwickler-Training & Mentoring"
+      "title": "Technische Beratung & Architektur",
+      "description": "Strategische Beratung, um fundierte technische Entscheidungen zu treffen, Skalierbarkeit zu planen und den langfristigen Erfolg Ihres Projekts zu sichern.",
+      "skill_architecture": "Software- & Systemarchitekturplanung",
+      "skill_reviews": "Code-Reviews & Qualitätssicherung",
+      "skill_tech_selection": "Auswahl und Bewertung des Technologie-Stacks",
+      "skill_seo": "Technische SEO-Audits & -Optimierung"
     },
-    "uiux": {
-      "title": "UI/UX Design",
-      "description": "Nutzerzentriertes Design, das nicht nur schön aussieht, sondern auch ein außergewöhnliches Benutzererlebnis bietet. Intuitive Schnittstellen, die ansprechen und überzeugen.",
-      "skill_uiDesign": "User Interface (UI) Design",
-      "skill_uxResearch": "User Experience (UX) Research",
-      "skill_seoOptimization": "SEO (Suchmaschinenoptimierung)",
-      "skill_uiTesting": "Usability-Tests"
+    "modernization": {
+      "title": "Modernisierung von Altsystemen",
+      "description": "Ich hauche älteren Anwendungen neues Leben ein, indem ich sie auf moderne Technologiestacks migriere und so Leistung, Sicherheit und Wartbarkeit verbessere.",
+      "skill_analysis": "Analyse bestehender Altsysteme (z.B. AngularJS)",
+      "skill_migration": "Schrittweise Migrationsstrategien zu Vue.js oder Nuxt.js",
+      "skill_refactoring": "Codebase-Refactoring für bessere Lesbarkeit",
+      "skill_integration": "Integration mit modernen APIs und Diensten"
     },
-    "performance": {
-      "title": "Performance-Optimierung",
-      "description": "Steigern Sie die Geschwindigkeit und Effizienz Ihrer Website. Schnellere Ladezeiten, reibungslosere Interaktionen und optimierter Code für bessere Benutzererfahrung und SEO.",
-      "skill_web": "Web Vitals Optimierung",
-      "skill_asset": "Asset-Optimierung",
-      "skill_caching": "Caching-Strategien",
-      "skill_mentoring": "Performance-Monitoring"
+    "devops": {
+      "title": "Agile Coaching & DevOps",
+      "description": "Verbesserung des Entwicklungszyklus Ihres Teams durch agile Best Practices und robuste DevOps-Prozesse, um bessere Software schneller auszuliefern.",
+      "skill_scrum": "Implementierung von agilen/Scrum-Prozessen",
+      "skill_ci_cd": "Continuous Integration & Deployment (CI/CD)",
+      "skill_docker": "Containerisierung mit Docker",
+      "skill_mentoring": "Entwickler-Training & Team-Mentoring"
     }
   },
   "contact": {

@@ -9,7 +9,7 @@
         v-for="item in navItems" 
         :key="item.path" 
         :to="item.path"
-        class="text-secondary dark:text-background hover:text-primary dark:hover:text-accent font-medium transition-colors duration-200"
+        class="text-secondary dark:text-background hover:text-primary :hover:cursor-pointer dark:hover:text-accent font-medium transition-colors duration-200"
         :class="{ 'text-primary dark:text-accent': $route.path === item.path }"
       >
         {{ item.label }}

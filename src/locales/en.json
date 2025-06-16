@@ -15,39 +15,40 @@
   },
   "services": {
     "title": "Services",
-    "webdev": {
-      "title": "Modern Web Development",
-      "description": "Modern, responsive web applications using Vue.js, React and other cutting-edge technologies. Performance optimized and user-focused solutions for businesses of all sizes.",
-      "skill_spa":"Dynamic Single Page Applications (SPAs) that offer a seamless, desktop-like user experience.",
-      "skill_pwa": "Progressive Web Apps (PWA)",
-      "skill_responsiveDesign": "Responsive & Mobile-First Design",
-      "skill_performance": "Performance Optimization"
+    "subtitle": "I offer a range of services to bring your digital products to life, from initial concept to deployment and beyond.",
+    "fullstack": {
+      "title": "Full-Stack Web Development",
+      "description": "Building complete, robust, and scalable web applications from the database to the user interface, using modern and proven technologies.",
+      "skill_frontend": "Frontend Development (Vue.js, Nuxt.js, TypeScript, Angular)",
+      "skill_backend": "Backend Development (Node.js, C#/.NET, Java)",
+      "skill_database": "Database Architecture & Management (SQL)",
+      "skill_testing": "Unit & End-to-End Testing"
     },
     "consulting": {
-      "title": "Technical Project Consulting",
-      "description": "Strategic technical guidance for your projects. From architecture planning to implementation strategies, I'll help you make informed technical decisions.",
-      "skill_architecture_planning": "Technical Architecture Planning",
-      "skill_codeQA": "Code Reviews & Quality Assurance",
-      "skill_stackSelection": "Technology Stack Selection",
-      "skill_developerTraining": "Developer Training & Mentoring"
+      "title": "Technical Consulting & Architecture",
+      "description": "Providing strategic guidance to help you make informed technical decisions, plan for scale, and ensure your project's long-term success.",
+      "skill_architecture": "Software & System Architecture Planning",
+      "skill_reviews": "Code Reviews & Quality Assurance",
+      "skill_tech_selection": "Technology Stack Selection & Evaluation",
+      "skill_seo": "Technical SEO Audits & Optimization"
     },
-    "uiux": {
-      "title": "UI/UX Design",
-      "description": "User-centered design that not only looks beautiful but also delivers an exceptional user experience. Intuitive interfaces that engage and convert.",
-      "skill_uiDesign": "User Interface (UI) Design",
-      "skill_uxResearch": "User Experience (UX) Research",
-      "skill_seoOptimization": "SEO (Search Engine Optimization)",
-      "skill_uiTesting": "Usability Testing"
-      },
-    "performance": {
-      "title": "Performance Optimization",
-      "description": "Boost your website's speed and efficiency. Faster loading times, smoother interactions, and optimized code for better user experience and SEO.",
-      "skill_web": "Web Vitals Optimization",
-      "skill_asset": "Asset Optimization",
-      "skill_caching": "Caching Strategies",
-      "skill_mentoring": "Performance Monitoring"
+    "modernization": {
+      "title": "Legacy System Modernization",
+      "description": "Breathing new life into older applications by migrating them to modern technology stacks, improving performance, security, and maintainability.",
+      "skill_analysis": "Analysis of existing legacy systems (e.g., AngularJS)",
+      "skill_migration": "Phased migration strategies to Vue.js or Nuxt.js",
+      "skill_refactoring": "Codebase refactoring for improved readability",
+      "skill_integration": "Integration with modern APIs and services"
+    },
+    "devops": {
+      "title": "Agile Coaching & DevOps",
+      "description": "Improving your team's development lifecycle with agile best practices and robust DevOps processes to ship better software, faster.",
+      "skill_scrum": "Agile/Scrum process implementation",
+      "skill_ci_cd": "Continuous Integration & Deployment (CI/CD)",
+      "skill_docker": "Containerization with Docker",
+      "skill_mentoring": "Developer Training & Team Mentoring"
     }
-},
+  },
   "contact": {
     "title": "Contact",
     "description": "Do you have questions or a project? Send me a message and I'll get back to you as soon as possible.",

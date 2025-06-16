@@ -7,194 +7,87 @@
       {{ $t('services.subtitle') }}
     </p>
     
-    <!-- Services Grid -->
     <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Web Development Service -->
+
       <div class="bg-white dark:bg-secondary/80 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
         <div class="h-2 bg-primary"></div>
         <div class="p-6 md:p-8">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary dark:text-accent">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
             </div>
-            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('services.webdev.title') }}</h2>
+            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('services.fullstack.title') }}</h2>
           </div>
-          
-          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">
-            {{ $t('services.webdev.description') }}
-          </p>
-          
+          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">{{ $t('services.fullstack.description') }}</p>
           <div class="mt-6 space-y-3">
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.webdev.skill_spa') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.webdev.skill_pwa') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.webdev.skill_responsiveDesign') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.webdev.skill_performance') }}</span>
+            <div class="flex items-center" v-for="skill in ['skill_frontend', 'skill_backend', 'skill_database', 'skill_testing']" :key="skill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t(`services.fullstack.${skill}`) }}</span>
             </div>
           </div>
         </div>
       </div>
-      
-      <!-- Technical Consulting Service -->
+
       <div class="bg-white dark:bg-secondary/80 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
         <div class="h-2 bg-accent"></div>
         <div class="p-6 md:p-8">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent dark:text-accent">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+               </svg>
             </div>
             <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('services.consulting.title') }}</h2>
           </div>
-          
-          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">
-            {{ $t('services.consulting.description') }}
-          </p>
-          
+          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">{{ $t('services.consulting.description') }}</p>
           <div class="mt-6 space-y-3">
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.consulting.skill_architecture_planning') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.consulting.skill_codeQA') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.consulting.skill_stackSelection') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.consulting.skill_developerTraining') }}</span>
+             <div class="flex items-center" v-for="skill in ['skill_architecture', 'skill_reviews', 'skill_tech_selection', 'skill_seo']" :key="skill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t(`services.consulting.${skill}`) }}</span>
             </div>
           </div>
         </div>
       </div>
       
-      <!-- UI/UX Design Service -->
       <div class="bg-white dark:bg-secondary/80 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
         <div class="h-2 bg-highlight"></div>
         <div class="p-6 md:p-8">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-highlight/10 rounded-full flex items-center justify-center text-highlight dark:text-highlight">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
             </div>
-            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('services.uiux.title') }}</h2>
+            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('services.modernization.title') }}</h2>
           </div>
-          
-          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">
-            {{ $t('services.uiux.description') }}
-          </p>
-          
-          <div class="mt-6 space-y-3">
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.uiux.skill_uiDesign') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.uiux.skill_uxResearch') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.uiux.skill_seoOptimization') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.uiux.skill_uiTesting') }}</span>
+          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">{{ $t('services.modernization.description') }}</p>
+           <div class="mt-6 space-y-3">
+             <div class="flex items-center" v-for="skill in ['skill_analysis', 'skill_migration', 'skill_refactoring', 'skill_integration']" :key="skill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t(`services.modernization.${skill}`) }}</span>
             </div>
           </div>
         </div>
       </div>
       
-      <!-- Performance Optimization Service -->
       <div class="bg-white dark:bg-secondary/80 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
-        <div class="h-2 bg-primary"></div>
+        <div class="h-2 bg-secondary"></div>
         <div class="p-6 md:p-8">
           <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary dark:text-accent">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+            <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary dark:text-accent">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
             </div>
-            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('services.performance.title') }}</h2>
+            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('services.devops.title') }}</h2>
           </div>
-          
-          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">
-            {{ $t('services.performance.description') }}
-          </p>
-          
+          <p class="text-secondary/80 dark:text-background/80 leading-relaxed">{{ $t('services.devops.description') }}</p>
           <div class="mt-6 space-y-3">
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.performance.skill_web') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.performance.skill_asset') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.performance.skill_caching') }}</span>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t('services.performance.skill_mentoring') }}</span>
+             <div class="flex items-center" v-for="skill in ['skill_scrum', 'skill_ci_cd', 'skill_docker', 'skill_mentoring']" :key="skill">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t(`services.devops.${skill}`) }}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
     
-    <!-- CTA Section -->
     <div class="mt-16 bg-gradient-to-r from-primary to-secondary rounded-xl shadow-lg p-8 md:p-12 text-center">
       <h2 class="text-2xl md:text-3xl font-bold text-background">{{ $t('contact.title') }}</h2>
       <p class="mt-4 text-background/90 max-w-2xl mx-auto">
