@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <url>
+        <loc>https://timo-achtelik.dev/de/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://timo-achtelik.dev/de/services</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/services"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/services"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://timo-achtelik.dev/de/about</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/about"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/about"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://timo-achtelik.dev/de/contact</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/contact"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/contact"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://timo-achtelik.dev/en/</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://timo-achtelik.dev/en/services</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/services"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/services"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://timo-achtelik.dev/en/about</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/about"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/about"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://timo-achtelik.dev/en/contact</loc>
+        <xhtml:link rel="alternate" hreflang="de" href="https://timo-achtelik.dev/de/contact"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://timo-achtelik.dev/en/contact"/>
+        <lastmod>2024-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>

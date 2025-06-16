@@ -18,7 +18,7 @@
     "webdev": {
       "title": "Modern Web Development",
       "description": "Modern, responsive web applications using Vue.js, React and other cutting-edge technologies. Performance optimized and user-focused solutions for businesses of all sizes.",
-      "skill_spa":"Single Page Application (SPA)",
+      "skill_spa":"Dynamic Single Page Applications (SPAs) that offer a seamless, desktop-like user experience.",
       "skill_pwa": "Progressive Web Apps (PWA)",
       "skill_responsiveDesign": "Responsive & Mobile-First Design",
       "skill_performance": "Performance Optimization"
@@ -110,42 +110,60 @@
     "contactText": "If you have questions regarding the collection, processing, or use of your personal data, for information, correction, blocking, or deletion of data, or revocation of granted consent, please contact us using the email address provided in the Imprint:<br /><a href=\"mailto:[Your Email Address]\" class=\"underline hover:no-underline\">[Your Email Address]</a>"
   },
   "about": {
-    "title": "About Me", 
+    "title": "About Me",
     "intro": {
-      "title": "Introduction", 
-      "content1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-      "content2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+      "title": "My Journey Into Code",
+      "content1": "From a young age, I was fascinated by computers, a passion that led me to pursue a technical bachelor's degree in computer science. It was there I had my first contact with development, and I enjoyed it from the very beginning. This passion has been the driving force through my entire career, from my first internship to my current role as a freelance developer.",
+      "content2": "My journey is defined by a commitment to learning and growth. I quickly progressed from a Junior to a Senior Developer, a testament to my ability to master new technologies and deliver results. I bring a well-developed, modern skill set combined with a strong sense of responsibility and a commitment to quality for every project I undertake."
     },
-    "experience": { 
-      "title": "Experience", 
+    "experience": {
+      "title": "Professional Experience",
       "jobs": {
         "job1": {
           "title": "Senior Software Engineer",
           "company": "BAYOOTEC GmbH",
           "period": "2024 - Present",
-          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+          "description": "As a Senior Engineer, I take full ownership of complex frontend and backend challenges. My focus is on designing scalable software architectures, ensuring high code quality through unit testing, and driving projects forward in an agile (Scrum) environment."
         },
         "job2": {
           "title": "Junior Software Engineer",
           "company": "BAYOOTEC GmbH",
           "period": "2023 - 2024",
-          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+          "description": "In my role as a Junior Full-Stack Developer, I was responsible for developing and maintaining web applications using technologies like Vue.js, Node.js, and C#. I actively contributed to the team's agile processes and quickly proved my ability to tackle complex problems independently."
+        },
+        "job3": {
+          "title": "Working Student Developer",
+          "company": "BAYOONET AG",
+          "period": "2017 - 2023",
+          "description": "For nearly seven years, I contributed to a wide range of web and on-premise projects. This long-term role allowed me to become a versatile developer, using diverse technologies like C#/.NET, Vue.js, Angular.js, and Kendo.UI, laying the foundation for my full-stack expertise."
         }
       }
     },
-    "education": { 
-       "title": "Education", 
+    "education": {
+      "title": "Education & Early Career",
       "edu1": {
-        "degree": "Master of Computer Science",
+        "degree": "M.Sc. Computer Science (Software Engineering)",
         "school": "University of Applied Sciences Darmstadt",
         "period": "2020 - 2023",
-        "description": "Master's degree in Computer Science with a focus on Software Engineering. Focus on software architecture, system development, and practical projects. Supplemented by theoretical deepening and interdisciplinary skills. Degree: Master of Science."
+        "description": "Master's degree focused on advanced software architecture, system development, and modern software engineering principles."
       },
       "edu2": {
-        "degree": "Bachelor of Computer Science",
+        "degree": "B.Sc. Computer Science (Communication & Media)",
         "school": "University of Applied Sciences Darmstadt",
         "period": "2016 - 2020",
-        "description": "Computer Science degree with a focus on Communication, Media, and Software Development. Combination of technical IT competence, media design, and intercultural aspects. Practice-oriented through projects, elective modules, and practical phase. Degree: Bachelor of Science."
+       "description": "Bachelor's degree combining a strong IT foundation with media design and user-centered communication concepts. This included a semester abroad studying Computer Science at Concordia University of Edmonton, Canada."
+      },
+      "edu3": {
+        "degree": "Apprenticeship, Software Developer",
+        "school": "Sage Software GmbH",
+        "period": "2014 - 2016",
+        "description": "Gained foundational web development skills using HTML, CSS, and AngularJS while working on the 'Sage Office Online' product."
+      },
+      "edu4": {
+        "degree": "Internship, IT",
+        "school": "Software AG",
+        "period": "2012 - 2013",
+        "description": "Acquired early experience in an enterprise environment, working with Business Process Management (BPM) software as part of my technical baccalaureate."
       }
     }
   }

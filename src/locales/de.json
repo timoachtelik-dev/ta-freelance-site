@@ -17,7 +17,7 @@
     "webdev": {
       "title": "Moderne Webentwicklung",
       "description": "Moderne, responsive Webanwendungen mit Vue.js, React und anderen zukunftsweisenden Technologien. Leistungsoptimierte und nutzerorientierte Lösungen für Unternehmen jeder Größe.",
-      "skill_spa": "Single Page Application (SPA)",
+      "skill_spa": "Single Page Application (SPA), die ein nahtloses, desktopähnliches Benutzererlebnis bieten",
       "skill_pwa": "Progressive Web Apps (PWA)",
       "skill_responsiveDesign": "Responsive & Mobile-First Design",
       "skill_performance": "Performance-Optimierung"
@@ -76,43 +76,61 @@
     "privacy": "Datenschutz",
     "rights": "Alle Rechte vorbehalten."
   },
-  "about": {
-    "title": "Über mich", 
-     "intro": {
-      "title": "Einleitung", 
-      "content1": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-      "content2": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+   "about": {
+    "title": "Über mich",
+    "intro": {
+      "title": "Mein Weg zum Code",
+      "content1": "Schon von Kindesalter an war ich von Computern fasziniert, eine Leidenschaft, die mich zu meinem Fachabitur in Informatik führte. Dort hatte ich erste Berührungen mit der Entwicklung und es hat mir von Anfang an Spaß gemacht. Diese Begeisterung ist die treibende Kraft in meiner gesamten Laufbahn, von meinem ersten Praktikum bis zu meiner heutigen Tätigkeit als freiberuflicher Entwickler.",
+      "content2": "Mein Werdegang ist geprägt von Lernbereitschaft und dem Willen zu wachsen. Innerhalb eines Jahres wurde ich vom Junior zum Senior Developer befördert – ein Beweis für meine Fähigkeit, neue Technologien schnell zu meistern und Ergebnisse zu liefern. Ich bringe ein gut ausgeprägtes, modernes Skillset mit, kombiniert mit hohem Verantwortungs- und Qualitätsbewusstsein für jedes Projekt."
     },
-    "experience": { 
-      "title": "Berufserfahrung", 
+    "experience": {
+      "title": "Berufserfahrung",
       "jobs": {
         "job1": {
           "title": "Senior Software Engineer",
           "company": "BAYOOTEC GmbH",
           "period": "2024 - Heute",
-          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+          "description": "Als Senior Engineer übernehme ich die volle Verantwortung für komplexe Frontend- und Backend-Herausforderungen. Mein Fokus liegt auf dem Entwurf skalierbarer Software-Architekturen, der Sicherstellung hoher Code-Qualität durch Unit-Tests und dem Vorantreiben von Projekten in einem agilen (Scrum) Umfeld."
         },
         "job2": {
           "title": "Junior Software Engineer",
           "company": "BAYOOTEC GmbH",
           "period": "2023 - 2024",
-          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+          "description": "In meiner Rolle als Junior Full-Stack-Entwickler war ich für die Entwicklung und Wartung von Webanwendungen mit Technologien wie Vue.js, Node.js und C# verantwortlich. Ich habe aktiv zu den agilen Prozessen des Teams beigetragen und meine Fähigkeit, komplexe Probleme selbstständig zu lösen, schnell unter Beweis gestellt."
+        },
+        "job3": {
+          "title": "Werkstudent Softwareentwicklung",
+          "company": "BAYOONET AG",
+          "period": "2017 - 2023",
+          "description": "Über fast sieben Jahre hinweg wirkte ich an einer Vielzahl von Web- und On-Premise-Projekten mit. Diese langfristige Position ermöglichte es mir, ein vielseitiger Entwickler zu werden und verschiedenste Technologien wie C#/.NET, Vue.js, Angular.js und Kendo.UI einzusetzen, was die Grundlage für meine Full-Stack-Expertise legte."
         }
       }
     },
-    "education": { 
-      "title": "Ausbildung", 
+    "education": {
+      "title": "Ausbildung & Früher Werdegang",
       "edu1": {
-        "degree": "Master of Computer Science",
+        "degree": "M.Sc. Informatik (Software Engineering)",
         "school": "Hochschule Darmstadt",
         "period": "2020 - 2023",
-        "description": "Masterstudium Informatik mit Schwerpunkt Software Engineering. Fokus auf Softwarearchitektur, Systementwicklung und praxisorientierten Projekten. Ergänzt durch theoretische Vertiefungen und überfachliche Kompetenzen. Abschluss: Master of Science."
+        "description": "Masterstudium mit Fokus auf fortgeschrittene Softwarearchitektur, Systementwicklung und moderne Prinzipien des Software Engineerings."
       },
       "edu2": {
-        "degree": "Bachelor of Computer Science",
+        "degree": "B.Sc. Informatik (Kommunikation & Medien)",
         "school": "Hochschule Darmstadt",
         "period": "2016 - 2020",
-        "description": "Informatikstudium mit Schwerpunkt auf Kommunikation, Medien und Softwareentwicklung. Kombination aus technischer IT-Kompetenz, Mediengestaltung und interkulturellen Aspekten. Praxisorientiert durch Projekte, Wahlmodule und Praxisphase. Abschluss: Bachelor of Science."
+        "description": "Bachelorstudium, das eine starke technische IT-Grundlage mit Mediengestaltung und benutzerzentrierten Kommunikationskonzepten verband. Teil des Studiums war ein Auslandssemester in Informatik an der Concordia University of Edmonton, Kanada."
+      },
+      "edu3": {
+        "degree": "Ausbildung zum Fachinformatiker Anwendungsentwicklung",
+        "school": "Sage Software GmbH",
+        "period": "2014 - 2016",
+        "description": "Erlangung grundlegender Fähigkeiten in der Webentwicklung mit HTML, CSS und AngularJS bei der Arbeit am Produkt 'Sage Office Online'."
+      },
+      "edu4": {
+        "degree": "Jahrespraktikum im Bereich IT",
+        "school": "Software AG",
+        "period": "2012 - 2013",
+        "description": "Im Rahmen meines Fachabiturs sammelte ich erste Erfahrungen in einem Großunternehmen bei der Arbeit mit Business Process Management (BPM) Software."
       }
     }
   }

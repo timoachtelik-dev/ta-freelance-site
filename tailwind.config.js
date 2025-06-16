@@ -6,11 +6,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#606c38',
-        secondary: '#283618',
-        background: '#fefae0',
-        accent: '#dda15e',
-        highlight: '#bc6c25',
+        primary: '#4A572D',   // Darker, more accessible olive for text
+        secondary: '#283618',  // No change, already has great contrast
+        background: '#FCFBF7',// Softer, off-white for better contrast
+        accent: '#C78D41',    // Darker ochre for accessible links
+        highlight: '#AD5D21', // A more vibrant rust for buttons/CTAs
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

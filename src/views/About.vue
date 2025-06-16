@@ -65,12 +65,31 @@
   </div>
 </template>
 <script setup>
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t, locale } = useI18n({
   inheritLocale: true,
   useScope: 'global'
+});
+
+onMounted(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Timo Achtelik",
+      "url": "https://timo-achtelik.dev/about",
+      "jobTitle": "Freelance Software Engineer & Technical Consultant",
+      "sameAs": [
+        "https://www.xing.com/profile/Timo_Achtelik2/web_profiles"
+        // Add other profiles like LinkedIn, GitHub, etc.
+      ]
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
 });
 
 // Computed properties to access localized data
@@ -85,7 +104,7 @@ const localizedJobs = computed(() => {
 });
 
 const localizedEducation = computed(() => {
-  const eduKeys = ['edu1', 'edu2'];
+  const eduKeys = ['edu1', 'edu2', 'edu3', 'edu4'];
   return eduKeys.map(key => ({
     degree: t(`about.education.${key}.degree`),
     school: t(`about.education.${key}.school`),

@@ -11,12 +11,20 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import { watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 export default {
   components: { Navbar, Footer },
   data() {
     return { 
       darkMode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches 
     }
+  },
+  setup() {
+    const { locale } = useI18n();
+    watch(locale, (newLocale) => {
+      document.documentElement.lang = newLocale;
+    });
   },
   methods: {
     toggleTheme() {

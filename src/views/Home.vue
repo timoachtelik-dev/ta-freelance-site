@@ -57,6 +57,24 @@
 
 <script>
 export default {
+   mounted() {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://timo-achtelik.dev/",
+      "name": "Timo Achtelik",
+      "author": {
+        "@type": "Person",
+        "name": "Timo Achtelik"
+      },
+      "description": "Freelancer for Web Development & Technical Consulting"
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+  },
   data() {
     return {
       skills: [
