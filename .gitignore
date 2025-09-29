@@ -18,7 +18,7 @@ yarn-error.log*
 
 # IDE/Editor folder configurations
 .idea/
-.vscode/
+
 
 # Mac specific files
 .DS_Store
