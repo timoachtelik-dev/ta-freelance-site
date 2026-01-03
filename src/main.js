@@ -5,10 +5,11 @@ import messages from './locales'
 import router from './router'
 import './assets/main.css';
 
+const savedLocale = localStorage.getItem('locale');
 const i18n = createI18n({
   legacy: false, 
   globalInjection: true,
-  locale: 'de',
+  locale: savedLocale || 'de',
   fallbackLocale: 'en',
   messages,
 })

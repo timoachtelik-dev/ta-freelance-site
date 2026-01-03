@@ -53,7 +53,7 @@
   </nav>
   
   <!-- Mobile Menu -->
-  <div v-if="mobileMenuOpen" class="md:hidden bg-background dark:bg-secondary border-b border-primary/10 shadow-md">
+  <div v-if="mobileMenuOpen" class="md:hidden bg-background dark:bg-secondaryDark border-b border-primary/10 shadow-md">
     <div class="flex flex-col px-6 py-4 space-y-4">
       <router-link 
         v-for="item in navItems" 
@@ -86,6 +86,8 @@
 </template>
 
 <script>
+import { SITE_CONFIG, PROFILE_MODES } from '../config/site';
+
 export default {
   name: 'Navbar',
   props: {
@@ -99,12 +101,18 @@ export default {
   },
   computed: {
     currentLocale() {
-      return this.$i18n.locale;
+      return this.$i18n.global?.locale?.value || this.$i18n.locale;
+    },
+    isApplicationMode() {
+      return SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION;
     },
     navItems() {
+      const servicesLabel = this.isApplicationMode
+        ? this.$t('nav.focusAreas')
+        : this.$t('nav.services');
       return [
         { path: '/', label: this.$t('nav.home') },
-        { path: '/services', label: this.$t('nav.services') },
+        { path: '/services', label: servicesLabel },
         { path: '/about', label: this.$t('nav.about') },
         { path: '/contact', label: this.$t('nav.contact') }
       ];
@@ -113,7 +121,11 @@ export default {
   methods: {
     toggleLanguage() {
       const newLocale = this.currentLocale === 'de' ? 'en' : 'de';
-      this.$i18n.locale = newLocale;
+      if (this.$i18n.global?.locale) {
+        this.$i18n.global.locale.value = newLocale;
+      } else {
+        this.$i18n.locale = newLocale;
+      }
       localStorage.setItem('locale', newLocale);
     }
   },
@@ -121,7 +133,11 @@ export default {
     // Check for saved locale preference
     const savedLocale = localStorage.getItem('locale');
     if (savedLocale) {
-      this.$i18n.locale = savedLocale;
+      if (this.$i18n.global?.locale) {
+        this.$i18n.global.locale.value = savedLocale;
+      } else {
+        this.$i18n.locale = savedLocale;
+      }
     }
   }
 }

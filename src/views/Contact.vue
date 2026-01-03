@@ -1,18 +1,18 @@
 <template>
-  <section class="min-h-[calc(100vh-64px)] bg-background dark:bg-gray-900 py-12 px-4 sm:px-8 md:px-16 flex flex-col items-center">
-    <div class="w-full max-w-3xl mx-auto">
+  <section class="min-h-[calc(100vh-64px)] bg-background dark:bg-secondaryDark py-12 px-4 sm:px-8 md:px-16 flex flex-col items-center">
+    <div class="w-full max-w-5xl xl:max-w-6xl mx-auto">
       <!-- Header section -->
       <div class="mb-12 text-center">
         <h1 class="text-3xl sm:text-4xl font-bold text-secondary dark:text-background mb-4">{{ $t('contact.title') }}</h1>
         <p class="text-lg text-primary dark:text-accent max-w-xl mx-auto">
-          {{ $t('contact.description') }}
+          {{ isApplicationMode ? $t('contact.applicationDescription') : $t('contact.description') }}
         </p>
       </div>
 
       <!-- Contact options -->
       <div class="grid md:grid-cols-2 gap-8 mb-12">
         <!-- Direct email -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-subtle p-6 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+        <div class="bg-surface dark:bg-surfaceDark rounded-lg shadow-subtle p-6 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
           <div class="flex items-center mb-4">
             <div class="p-3 rounded-full bg-accent/10 text-highlight">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -22,8 +22,8 @@
             <h3 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('contact.email') }}</h3>
           </div>
           <p class="text-primary dark:text-accent mb-4">{{ $t('contact.emailDescription') }}</p>
-          <a href="mailto:kontakt@timo-achtelik.dev" class="text-highlight hover:text-accent dark:text-accent dark:hover:text-highlight font-medium transition-colors duration-300 flex items-center">
-            kontakt@timo-achtelik.dev
+          <a :href="`mailto:${contactEmail}`" class="text-highlight hover:text-accent dark:text-accent dark:hover:text-highlight font-medium transition-colors duration-300 flex items-center">
+            {{ contactEmail }}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -31,7 +31,7 @@
         </div>
 
         <!-- Response time -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-subtle p-6 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+        <div class="bg-surface dark:bg-surfaceDark rounded-lg shadow-subtle p-6 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
           <div class="flex items-center mb-4">
             <div class="p-3 rounded-full bg-accent/10 text-highlight">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,11 +44,52 @@
         </div>
       </div>
 
+      <div class="bg-surface dark:bg-surfaceDark rounded-lg shadow-subtle p-6 mb-12">
+        <h3 class="text-xl font-semibold text-secondary dark:text-background mb-2">
+          {{ $t('contact.otherWaysTitle') }}
+        </h3>
+        <p class="text-primary dark:text-accent">
+          {{ $t('contact.otherWaysDescription') }}
+        </p>
+        <div class="mt-4 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+          <a
+            :href="cvUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-4 py-2 rounded-md bg-highlight text-white hover:bg-accent transition-colors duration-200"
+          >
+            {{ $t('contact.cvLabel') }}
+          </a>
+          <a
+            v-for="profile in profiles"
+            :key="profile.name"
+            :href="profile.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 text-secondary dark:text-background hover:border-highlight hover:text-highlight transition-colors duration-200"
+          >
+            {{ profile.name }}
+          </a>
+        </div>
+      </div>
+
       <!-- Contact form -->
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+      <div class="bg-surface dark:bg-surfaceDark rounded-lg shadow-md p-8">
         <h2 class="text-2xl font-semibold text-secondary dark:text-background mb-6">{{ $t('contact.formTitle') }}</h2>
         
         <form @submit.prevent="handleSubmit" class="space-y-6">
+          <div class="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+            <label for="company" class="block text-sm font-medium text-primary dark:text-accent mb-1">
+              {{ $t('contact.honeypotLabel') }}
+            </label>
+            <input
+              type="text"
+              id="company"
+              v-model="honeypot"
+              autocomplete="off"
+              tabindex="-1"
+            />
+          </div>
           <!-- Name field -->
           <div>
             <label for="name" class="block text-sm font-medium text-primary dark:text-accent mb-1">{{ $t('contact.name') }} *</label>
@@ -100,6 +141,11 @@
               required
             ></textarea>
           </div>
+
+          <div v-if="turnstileEnabled" class="flex flex-col items-center gap-2">
+            <p class="text-sm text-primary dark:text-accent">{{ $t('contact.captchaLabel') }}</p>
+            <div ref="turnstileContainer"></div>
+          </div>
           
           <!-- Submit button -->
           <div>
@@ -135,6 +181,8 @@
 </template>
 
 <script>
+import { SITE_CONFIG, PROFILE_MODES } from '../config/site';
+
 export default {
   name: 'Contact',
   data() {
@@ -145,6 +193,9 @@ export default {
         subject: '',
         message: ''
       },
+      honeypot: '',
+      captchaToken: '',
+      turnstileWidgetId: null,
       isSubmitting: false,
       formStatus: {
         show: false,
@@ -153,32 +204,138 @@ export default {
       }
     }
   },
+  computed: {
+    contactEmail() {
+      return SITE_CONFIG.contactEmail;
+    },
+    cvUrl() {
+      return SITE_CONFIG.cvUrl;
+    },
+    isApplicationMode() {
+      return SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION;
+    },
+    profiles() {
+      return SITE_CONFIG.profiles || [];
+    },
+    contactEndpoint() {
+      return import.meta.env.VITE_CONTACT_ENDPOINT || '/api/contact';
+    },
+    turnstileSiteKey() {
+      return import.meta.env.VITE_TURNSTILE_SITE_KEY || '';
+    },
+    turnstileEnabled() {
+      return Boolean(this.turnstileSiteKey);
+    }
+  },
+  mounted() {
+    this.ensureTurnstile();
+  },
   methods: {
+    ensureTurnstile() {
+      if (!this.turnstileEnabled) {
+        return;
+      }
+
+      if (window.turnstile) {
+        this.renderTurnstile();
+        return;
+      }
+
+      const existingScript = document.querySelector('script[data-turnstile]');
+      if (existingScript) {
+        existingScript.addEventListener('load', this.renderTurnstile, { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      script.dataset.turnstile = 'true';
+      script.onload = this.renderTurnstile;
+      document.head.appendChild(script);
+    },
+    renderTurnstile() {
+      if (!this.turnstileEnabled || !this.$refs.turnstileContainer || !window.turnstile) {
+        return;
+      }
+
+      this.turnstileWidgetId = window.turnstile.render(this.$refs.turnstileContainer, {
+        sitekey: this.turnstileSiteKey,
+        theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
+        callback: (token) => {
+          this.captchaToken = token;
+        },
+        'expired-callback': () => {
+          this.captchaToken = '';
+        },
+        'error-callback': () => {
+          this.captchaToken = '';
+        }
+      });
+    },
     async handleSubmit() {
       this.isSubmitting = true;
       this.formStatus.show = false;
-      
+
       try {
-        // Here you would typically send the form data to your backend
-        // For now, we'll simulate a successful submission after a delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // Success handling
+        if (this.turnstileEnabled && !this.captchaToken) {
+          this.formStatus = {
+            show: true,
+            isError: true,
+            message: this.$t('contact.captchaRequired')
+          };
+          return;
+        }
+
+        const name = this.form.name.trim();
+        const email = this.form.email.trim();
+        const subject = (this.form.subject || '').trim() || this.$t('contact.defaultSubject');
+        const message = this.form.message.trim();
+        const locale = this.$i18n?.locale;
+        const localeValue = typeof locale === 'string' ? locale : locale?.value || 'de';
+        const payload = {
+          name,
+          email,
+          subject,
+          message,
+          token: this.captchaToken,
+          honeypot: this.honeypot,
+          locale: localeValue,
+          profileMode: SITE_CONFIG.profileMode
+        };
+
+        const response = await fetch(this.contactEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok) {
+          throw new Error(result.message || 'Request failed');
+        }
+
         this.formStatus = {
           show: true,
           isError: false,
           message: this.$t('contact.successMessage')
         };
-        
-        // Reset form fields
+
         this.form = {
           name: '',
           email: '',
           subject: '',
           message: ''
         };
+        this.honeypot = '';
+        this.captchaToken = '';
+        if (this.turnstileEnabled && window.turnstile && this.turnstileWidgetId !== null) {
+          window.turnstile.reset(this.turnstileWidgetId);
+        }
       } catch (error) {
-        // Error handling
         this.formStatus = {
           show: true,
           isError: true,

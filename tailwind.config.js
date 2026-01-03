@@ -6,11 +6,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#4A572D',   // Darker, more accessible olive for text
-        secondary: '#283618',  // No change, already has great contrast
-        background: '#FCFBF7',// Softer, off-white for better contrast
-        accent: '#C78D41',    // Darker ochre for accessible links
-        highlight: '#AD5D21', // A more vibrant rust for buttons/CTAs
+        primary: '#4B5563',   // Muted text
+        secondary: '#1F2933', // Ink
+        secondaryDark: '#243141', // Lighter dark background
+        background: '#F5F5F4',// Mist background
+        surface: '#EFECE8',   // Soft card surface
+        surfaceDark: '#2A3445', // Dark card surface
+        accent: '#B08968',    // Muted sand
+        highlight: '#64748B', // Cool slate
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

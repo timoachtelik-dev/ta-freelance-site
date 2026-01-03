@@ -1,6 +1,6 @@
 <template>
   <div :class="darkMode ? 'dark' : ''">
-    <main class="bg-background dark:bg-secondary text-secondary dark:text-background min-h-screen transition-colors duration-300">
+    <main class="bg-background dark:bg-secondaryDark text-secondary dark:text-background min-h-screen transition-colors duration-300">
       <Navbar @toggle-theme="toggleTheme" :darkMode="darkMode" />
       <router-view />
       <Footer />

@@ -3,11 +3,23 @@
     "home": "Startseite",
     "services": "Leistungen",
     "about": "Über mich",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "focusAreas": "Schwerpunkte"
   },
   "home": {
     "headline": "Hallo, ich bin Timo Achtelik",
-    "subline": "Freelancer für Webentwicklung & technische Beratung",
+    "subline": "Senior Software Engineer & Freelancer für Webentwicklung und technische Beratung",
+    "freelanceKeywords": "Vibe Coding, Codebase-Cleanup-Spezialist, Legacy-Cleanup und pragmatisches Refactoring für langfristige Wartbarkeit.",
+    "applicationHeadline": "Hallo, ich bin Timo Achtelik",
+    "applicationSubline": "Senior Software Engineer mit Fokus auf moderne Web-Plattformen und skalierbare Systeme",
+    "cta": {
+      "cv": "Lebenslauf ansehen (PDF)",
+      "linkedin": "LinkedIn"
+    },
+    "references": {
+      "title": "Referenzen",
+      "subtitle": "Ausgewählte Projekte und Ergebnisse aus der jüngsten Zusammenarbeit."
+    },
     "skills": {
       "headline": "Fähigkeiten"
     }
@@ -29,6 +41,7 @@
       "skill_architecture": "Software- & Systemarchitekturplanung",
       "skill_reviews": "Code-Reviews & Qualitätssicherung",
       "skill_tech_selection": "Auswahl und Bewertung des Technologie-Stacks",
+      "skill_vibe_coding": "Vibe Coding für strukturierte Entscheidungen",
       "skill_seo": "Technische SEO-Audits & -Optimierung"
     },
     "modernization": {
@@ -48,22 +61,67 @@
       "skill_mentoring": "Entwickler-Training & Team-Mentoring"
     }
   },
+  "focus": {
+    "title": "Schwerpunkte",
+    "subtitle": "Kernkompetenzen, die ich in Produktteams und Engineering-Organisationen einbringe.",
+    "areas": {
+      "engineering": {
+        "title": "Full-Stack Engineering",
+        "description": "Entwicklung und Weiterentwicklung zuverlässiger Webanwendungen mit Fokus auf Produktqualität und Nutzererlebnis.",
+        "item1": "Vue.js / Nuxt.js, Node.js, C#/.NET",
+        "item2": "API-Design, Performance und Testing",
+        "item3": "Pragmatische Architekturentscheidungen"
+      },
+      "quality": {
+        "title": "Qualität & Wartbarkeit",
+        "description": "Nachhaltige Codebases durch Reviews, Standards und Teststrategien.",
+        "item1": "Code-Reviews und Refactoring",
+        "item2": "Unit- & End-to-End-Tests",
+        "item3": "Dokumentation und Wissenstransfer"
+      },
+      "architecture": {
+        "title": "Architektur & Verantwortung",
+        "description": "Systeme so gestalten, dass sie verständlich, flexibel und langfristig wartbar bleiben.",
+        "item1": "Klare Strukturen und saubere Schnittstellen",
+        "item2": "Entscheidungen mit Spielraum für Weiterentwicklung",
+        "item3": "Wartbarkeit unter realen Bedingungen"
+      },
+      "collaboration": {
+        "title": "Zusammenarbeit & Delivery",
+        "description": "Enge Abstimmung mit Stakeholdern für messbare Ergebnisse in agilen Teams.",
+        "item1": "Agile/Scrum-Methoden",
+        "item2": "Klare Kommunikation mit Produktteams",
+        "item3": "Iterative Lieferung und Feedback"
+      }
+    },
+    "ctaTitle": "Lassen Sie uns sprechen",
+    "ctaDescription": "Offen für Rollen, in denen ich moderne Webprodukte und skalierbare Systeme mitgestalten kann.",
+    "ctaButton": "Kontakt"
+  },
   "contact": {
     "title": "Kontakt",
     "description": "Haben Sie Fragen oder ein Projekt? Schreiben Sie mir eine Nachricht und ich melde mich so schnell wie möglich bei Ihnen.",
+    "applicationDescription": "Für Jobangebote, Zusammenarbeit oder Fragen können Sie mich gerne kontaktieren.",
     "button_text": "Kontaktieren Sie mich",
     "email": "E-Mail",
     "emailDescription": "Für direkte Anfragen oder Projektvorschläge:",
     "response": "Antwortzeit",
     "responseDescription": "Ich antworte in der Regel innerhalb von 24 Stunden an Werktagen.",
     "formTitle": "Kontaktformular",
+    "otherWaysTitle": "Weitere Kontaktwege",
+    "otherWaysDescription": "Sie erreichen mich auch über Profile oder den Lebenslauf:",
+    "captchaLabel": "Spam-Schutz",
+    "captchaRequired": "Bitte bestätigen Sie das Captcha, um die Nachricht zu senden.",
+    "honeypotLabel": "Firma",
+    "cvLabel": "Lebenslauf (PDF, Deutsch)",
     "name": "Name",
     "namePlaceholder": "Ihr Name",
-    "emailPlaceholder": "ihre-email@example.com",
+    "emailPlaceholder": "ihre-email{'@'}example.com",
     "subject": "Betreff",
     "subjectPlaceholder": "Betreff Ihrer Nachricht",
     "message": "Nachricht",
     "messagePlaceholder": "Ihre Nachricht...",
+    "defaultSubject": "Anfrage über die Website",
     "send": "Nachricht senden",
     "sending": "Wird gesendet...",
     "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei Ihnen melden.",
@@ -77,12 +135,47 @@
     "privacy": "Datenschutz",
     "rights": "Alle Rechte vorbehalten."
   },
+  "imprint": {
+    "title": "Impressum",
+    "legalBasisHeading": "Angaben gemäß § 5 TMG",
+    "providerName": "Timo Achtelik",
+    "providerStreet": "-",
+    "providerZipCity": "60528 Frankfurt am Main",
+    "contact": {
+      "heading": "Kontakt",
+      "emailLabel": "E-Mail",
+      "emailAddress": "kontakt{'@'}timo-achtelik.de"
+    },
+    "disclaimerHeading": "Haftungsausschluss",
+    "linkLiabilityHeading": "Haftung für Links",
+    "linkLiabilityText": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Daher können wir für diese fremden Inhalte keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.",
+    "copyrightHeading": "Urheberrecht",
+    "copyrightText": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "responsibleHeading": "Verantwortliche Stelle",
+    "responsibleText": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br />Timo Achtelik<br />[Vollständige Anschrift wie im Impressum]",
+    "dataCollectionHeading": "Datenerfassung auf dieser Website",
+    "dataCollectionText": "Beim Besuch dieser Website sendet Ihr Browser automatisch Informationen an den Server unseres Hosting-Anbieters. Diese Informationen werden temporär in Server-Logfiles gespeichert. Folgende Informationen können dabei ohne Ihr Zutun erfasst und bis zur automatisierten Löschung gespeichert werden:\n<ul>\n  <li>Browsertyp und Browserversion</li>\n  <li>Verwendetes Betriebssystem</li>\n  <li>Referrer-URL (zuvor besuchte Seite)</li>\n  <li>Hostname des zugreifenden Rechners</li>\n  <li>Uhrzeit der Serveranfrage</li>\n  <li>IP-Adresse</li>\n</ul>\nDie Verarbeitung erfolgt, um die Inhalte der Website korrekt auszuliefern, die Inhalte zu optimieren, die Funktionsfähigkeit der IT-Systeme langfristig sicherzustellen und im Falle eines Cyberangriffs Informationen zur Strafverfolgung bereitzustellen.<br />Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Unser berechtigtes Interesse liegt in der technischen Administration und Darstellung der Website. Diese Daten werden in der Regel nach 7 Tagen gelöscht, sofern keine sicherheitsrelevanten Ereignisse eine längere Aufbewahrung erfordern.",
+    "cookiesHeading": "Cookies & Local Storage",
+    "cookiesText": "Diese Website verwendet keine Tracking-Cookies. Funktionale Einstellungen werden im Local Storage Ihres Browsers gespeichert (z. B. Dark Mode und Sprachwahl), um die Nutzung zu verbessern. Sie können diese Einträge jederzeit in den Browser-Einstellungen löschen. Wenn Sie die Nutzung von Local Storage deaktivieren, kann dies die Funktionalität der Website einschränken.",
+    "thirdPartiesHeading": "Dienste von Drittanbietern",
+    "thirdPartiesText": "Diese Website nutzt folgende Dienste von Drittanbietern. Beim Aufruf dieser Dienste können Daten an den jeweiligen Anbieter übertragen werden.<br />- <strong>Google Fonts</strong> (Schriftarten-Auslieferung): <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline hover:no-underline\">https://policies.google.com/privacy</a><br />- <strong>LinkedIn</strong> (externer Profil-Link): <a href=\"https://www.linkedin.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline hover:no-underline\">https://www.linkedin.com/legal/privacy-policy</a><br />- <strong>Xing</strong> (externer Profil-Link): <a href=\"https://privacy.xing.com/en/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline hover:no-underline\">https://privacy.xing.com/en/privacy-policy</a>",
+    "rightsHeading": "Ihre Rechte",
+    "rightsText": "Sie haben das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft, Empfänger und Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.<br />Außerdem haben Sie das Recht, die Verarbeitung Ihrer personenbezogenen Daten einzuschränken, der Verarbeitung zu widersprechen sowie das Recht auf Datenübertragbarkeit.<br />Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Kontaktadresse an uns wenden.<br />Zudem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde für Datenschutzfragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem unser Unternehmen seinen Sitz hat.",
+    "contactHeading": "Kontakt bei Datenschutzfragen",
+    "contactText": "Wenn Sie Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten haben, zu Auskünften, Berichtigung, Sperrung oder Löschung von Daten oder zum Widerruf erteilter Einwilligungen, wenden Sie sich bitte an die im Impressum angegebene E-Mail-Adresse:<br /><a href=\"mailto:kontakt{'@'}timo-achtelik.de\" class=\"underline hover:no-underline\">kontakt{'@'}timo-achtelik.de</a>"
+  },
    "about": {
     "title": "Über mich",
     "intro": {
       "title": "Mein Weg zum Code",
       "content1": "Schon von Kindesalter an war ich von Computern fasziniert, eine Leidenschaft, die mich zu meinem Fachabitur in Informatik führte. Dort hatte ich erste Berührungen mit der Entwicklung und es hat mir von Anfang an Spaß gemacht. Diese Begeisterung ist die treibende Kraft in meiner gesamten Laufbahn, von meinem ersten Praktikum bis zu meiner heutigen Tätigkeit als freiberuflicher Entwickler.",
-      "content2": "Mein Werdegang ist geprägt von Lernbereitschaft und dem Willen zu wachsen. Innerhalb eines Jahres wurde ich vom Junior zum Senior Developer befördert – ein Beweis für meine Fähigkeit, neue Technologien schnell zu meistern und Ergebnisse zu liefern. Ich bringe ein gut ausgeprägtes, modernes Skillset mit, kombiniert mit hohem Verantwortungs- und Qualitätsbewusstsein für jedes Projekt."
+      "content2": "Mein Werdegang ist geprägt von Lernbereitschaft und dem Willen zu wachsen. Innerhalb eines Jahres wurde ich vom Junior zum Senior Developer befördert – ein Beweis für meine Fähigkeit, neue Technologien schnell zu meistern und Ergebnisse zu liefern. Ich bringe ein gut ausgeprägtes, modernes Skillset mit, kombiniert mit hohem Verantwortungs- und Qualitätsbewusstsein für jedes Projekt.",
+      "applicationContent1": "In meiner Arbeit entsteht gute Software selten durch einzelne starke Features, sondern durch klare Strukturen, saubere Schnittstellen und bewusste Entscheidungen über Zeit. Ich lege Wert darauf, dass Systeme verständlich bleiben – auch für Entwickler, die Monate später dazukommen.",
+      "applicationContent2": "Ich arbeite gern an komplexen Systemen, aber nicht an komplizierten. Wenn Architekturentscheidungen anstehen, treffe ich sie so, dass sie Spielraum lassen, statt neue Abhängigkeiten zu schaffen. Qualität heißt für mich Wartbarkeit unter realen Bedingungen.",
+      "applicationContent3": "Seit rund einem Jahr setze ich Vibe Coding gezielt ein: um Denkprozesse zu strukturieren, Optionen zu vergleichen und Entscheidungen nachvollziehbar zu machen. Ich suche eine Aufgabe, in der ich über reine Umsetzung hinaus mitgestalten kann – technisch, strukturell und im Austausch mit anderen Entwicklern."
     },
     "experience": {
       "title": "Berufserfahrung",
