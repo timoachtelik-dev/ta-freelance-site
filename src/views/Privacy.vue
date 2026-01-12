@@ -58,9 +58,22 @@
         >
           {{ $t('privacy.contactHeading') }}
         </h2>
-         <p class="mb-4 text-primary dark:text-accent" v-html="$t('privacy.contactText')"></p>
+         <p class="mb-4 text-primary dark:text-accent" v-html="$t('privacy.contactText', { email: contactEmail })"></p>
 
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import { SITE_CONFIG } from '../config/site';
+
+export default {
+  name: 'Privacy',
+  computed: {
+    contactEmail() {
+      return SITE_CONFIG.contactEmail;
+    },
+  },
+};
+</script>

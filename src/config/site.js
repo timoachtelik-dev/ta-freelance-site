@@ -9,11 +9,17 @@ const envProfileMode = ((import.meta.env && import.meta.env.VITE_PROFILE_MODE) |
 const resolvedProfileMode = Object.values(PROFILE_MODES).includes(envProfileMode)
   ? envProfileMode
   : PROFILE_MODES.FREELANCE;
+const contactEmails = {
+  [PROFILE_MODES.FREELANCE]: 'projects@timo-achtelik.de',
+  [PROFILE_MODES.APPLICATION]: 'career@timo-achtelik.de',
+};
+const resolvedContactEmail = contactEmails[resolvedProfileMode] || contactEmails[PROFILE_MODES.FREELANCE];
 
 export const SITE_CONFIG = {
   // Switch between PROFILE_MODES.FREELANCE and PROFILE_MODES.APPLICATION.
   profileMode: resolvedProfileMode,
-  contactEmail: 'kontakt@timo-achtelik.de',
+  contactEmail: resolvedContactEmail,
+  contactEmails,
   cvUrl,
   portraitSrc: new URL('../assets/portrait.jpg', import.meta.url).href,
   portraitAlt: 'Portrait of Timo Achtelik',

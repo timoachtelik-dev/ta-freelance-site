@@ -65,10 +65,12 @@ Beispiel Reverse Proxy (Caddy):
 
 Wichtige Env-Variablen:
 - `RESEND_API_KEY`
-- `CONTACT_FROM_EMAIL` (muss bei Resend verifiziert sein)
-- `CONTACT_TO_EMAIL`
+- `CONTACT_FROM_EMAIL` (Default, muss bei Resend verifiziert sein)
+- `CONTACT_TO_EMAIL` (Default)
+- `CONTACT_FROM_EMAIL_FREELANCE` / `CONTACT_TO_EMAIL_FREELANCE` (optional, überschreibt Default)
+- `CONTACT_FROM_EMAIL_APPLICATION` / `CONTACT_TO_EMAIL_APPLICATION` (optional, überschreibt Default)
 - `TURNSTILE_SECRET`
-- `CONTACT_ALLOWED_ORIGIN` (optional, nur bei Cross-Origin-Setup)
+- `CONTACT_ALLOWED_ORIGINS` (optional, CSV-Liste bei Cross-Origin-Setup)
 - `VITE_TURNSTILE_SITE_KEY`
 - `VITE_CONTACT_ENDPOINT` (z. B. `/api/contact`)
 

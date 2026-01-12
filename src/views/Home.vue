@@ -33,17 +33,30 @@
       </div>
       
       <!-- Right column - Visual element -->
-      <div class="lg:w-2/5">
-        <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-2xl p-2 rotate-3 transition-all duration-300 hover:rotate-0">
-          <div class="bg-background dark:bg-surfaceDark rounded-xl overflow-hidden p-6">
-            <div class="grid grid-cols-3 gap-2">
-              <div v-for="i in 9" :key="i" class="h-20 rounded-lg" :class="[
-                i % 3 === 1 ? 'bg-primary/10 dark:bg-primary/20' : 
-                i % 3 === 2 ? 'bg-accent/10 dark:bg-accent/20' : 
-                'bg-highlight/10 dark:bg-highlight/20'
-              ]"></div>
+      <div class="lg:w-2/5 flex justify-center">
+        <div class="w-full max-w-xs sm:max-w-md">
+          <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-2xl p-2 sm:p-3 rotate-0 sm:rotate-1 lg:rotate-3 transition-all duration-300 hover:rotate-0 aspect-[16/10]">
+            <div class="bg-background dark:bg-surfaceDark rounded-xl overflow-hidden p-3 sm:p-4 h-full flex flex-col">
+              <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface/70 dark:bg-secondaryDark/60">
+                <span class="h-2 w-2 rounded-full bg-primary/30"></span>
+                <span class="h-2 w-2 rounded-full bg-accent/40"></span>
+                <span class="h-2 w-2 rounded-full bg-highlight/40"></span>
+                <div class="ml-auto h-2 w-16 sm:w-20 rounded-full bg-primary/10 dark:bg-primary/20"></div>
+              </div>
+              <div class="mt-3 flex-1 grid grid-cols-3 grid-rows-2 gap-2 sm:gap-3">
+                <div
+                  v-for="i in 6"
+                  :key="i"
+                  class="rounded-lg"
+                  :class="[
+                    i % 3 === 1 ? 'bg-primary/20 sm:bg-primary/10 dark:bg-primary/30 sm:dark:bg-primary/20' :
+                    i % 3 === 2 ? 'bg-accent/20 sm:bg-accent/10 dark:bg-accent/30 sm:dark:bg-accent/20' :
+                    'bg-highlight/20 sm:bg-highlight/10 dark:bg-highlight/30 sm:dark:bg-highlight/20'
+                  ]"
+                ></div>
+              </div>
+              <div class="mt-3 h-6 sm:h-7 rounded-lg bg-primary/20 sm:bg-primary/10 dark:bg-primary/30 sm:dark:bg-primary/20"></div>
             </div>
-            <div class="mt-4 h-12 bg-primary/10 dark:bg-primary/20 rounded-lg"></div>
           </div>
         </div>
       </div>

@@ -112,6 +112,7 @@
     "otherWaysTitle": "Other ways to reach me",
     "otherWaysDescription": "You can also reach me via my profiles or CV:",
     "captchaLabel": "Spam protection",
+    "captchaUnavailable": "Captcha could not be loaded. Disable ad blockers or try again.",
     "captchaRequired": "Please complete the captcha to send your message.",
     "honeypotLabel": "Company",
     "cvLabel": "CV (PDF, German)",
@@ -126,7 +127,18 @@
     "send": "Send message",
     "sending": "Sending...",
     "successMessage": "Thank you! Your message has been successfully sent. I will get back to you as soon as possible.",
-    "errorMessage": "An error occurred. Please try again later or contact me directly via email."
+    "errorMessage": "An error occurred. Please try again later or contact me directly via email.",
+    "errorInvalidName": "Please enter a valid name.",
+    "errorInvalidEmail": "Please enter a valid email address.",
+    "errorInvalidSubject": "Please enter a valid subject.",
+    "errorInvalidMessage": "Please enter a valid message.",
+    "errorCaptchaUnavailable": "Captcha is currently unavailable. Please try again or contact me via email.",
+    "errorCaptchaFailed": "Captcha verification failed. Please try again.",
+    "errorEmailServiceNotConfigured": "Email service is not configured. Please contact me directly via email.",
+    "errorEmailDeliveryFailed": "Email could not be delivered. Please try again later or contact me directly via email.",
+    "errorOriginNotAllowed": "Requests from this domain are not allowed.",
+    "errorRateLimited": "Too many requests. Please try again later.",
+    "errorServer": "Server error. Please try again later."
   },
   "footer": {
     "description": "Professional web development and technical consulting for your individual projects.",
@@ -145,7 +157,7 @@
     "contact": {
       "heading": "Contact",
       "emailLabel": "Email",
-      "emailAddress": "kontakt{'@'}timo-achtelik.de"
+      "emailAddress": "projects{'@'}timo-achtelik.de"
     },
     "disclaimerHeading": "Disclaimers",
     "linkLiabilityHeading": "Liability for Links",
@@ -166,7 +178,7 @@
     "rightsHeading": "Your Data Protection Rights",
     "rightsText": "You have the right to request information about your stored personal data, its origin, its recipients, and the purpose of its collection at no charge. You also have the right to request its correction, blocking, or deletion.<br />Furthermore, you have the right to request the restriction of processing your personal data, the right to object to processing, and the right to data portability.<br />To do so or if you have further questions about personal data, you can contact us at any time using the contact information provided in the Imprint.<br />You also have the right to lodge a complaint with the competent supervisory authority. The competent supervisory authority for data protection matters in Germany is the State Data Protection Commissioner of the federal state in which our company is based.",
     "contactHeading": "Contact for Privacy Concerns",
-    "contactText": "If you have questions regarding the collection, processing, or use of your personal data, for information, correction, blocking, or deletion of data, or revocation of granted consent, please contact us using the email address provided in the Imprint:<br /><a href=\"mailto:kontakt{'@'}timo-achtelik.de\" class=\"underline hover:no-underline\">kontakt{'@'}timo-achtelik.de</a>"
+    "contactText": "If you have questions regarding the collection, processing, or use of your personal data, for information, correction, blocking, or deletion of data, or revocation of granted consent, please contact us using the email address provided in the Imprint:<br /><a href=\"mailto:{email}\" class=\"underline hover:no-underline\">{email}</a>"
   },
   "about": {
     "title": "About Me",

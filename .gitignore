@@ -18,6 +18,7 @@ yarn-error.log*
 
 # IDE/Editor folder configurations
 .idea/
+.vscode/tasks.json
 
 
 # Mac specific files

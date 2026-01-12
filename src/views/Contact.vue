@@ -145,6 +145,9 @@
           <div v-if="turnstileEnabled" class="flex flex-col items-center gap-2">
             <p class="text-sm text-primary dark:text-accent">{{ $t('contact.captchaLabel') }}</p>
             <div ref="turnstileContainer"></div>
+            <p v-if="turnstileStatus === 'error'" class="text-xs text-red-600 dark:text-red-300 text-center">
+              {{ $t('contact.captchaUnavailable') }}
+            </p>
           </div>
           
           <!-- Submit button -->
@@ -183,6 +186,20 @@
 <script>
 import { SITE_CONFIG, PROFILE_MODES } from '../config/site';
 
+const ERROR_CODE_TO_MESSAGE_KEY = {
+  INVALID_NAME: 'contact.errorInvalidName',
+  INVALID_EMAIL: 'contact.errorInvalidEmail',
+  INVALID_SUBJECT: 'contact.errorInvalidSubject',
+  INVALID_MESSAGE: 'contact.errorInvalidMessage',
+  CAPTCHA_NOT_CONFIGURED: 'contact.errorCaptchaUnavailable',
+  CAPTCHA_VERIFICATION_FAILED: 'contact.errorCaptchaFailed',
+  EMAIL_SERVICE_NOT_CONFIGURED: 'contact.errorEmailServiceNotConfigured',
+  EMAIL_DELIVERY_FAILED: 'contact.errorEmailDeliveryFailed',
+  ORIGIN_NOT_ALLOWED: 'contact.errorOriginNotAllowed',
+  RATE_LIMITED: 'contact.errorRateLimited',
+  SERVER_ERROR: 'contact.errorServer'
+};
+
 export default {
   name: 'Contact',
   data() {
@@ -196,6 +213,7 @@ export default {
       honeypot: '',
       captchaToken: '',
       turnstileWidgetId: null,
+      turnstileStatus: 'idle',
       isSubmitting: false,
       formStatus: {
         show: false,
@@ -236,6 +254,8 @@ export default {
         return;
       }
 
+      this.turnstileStatus = 'loading';
+
       if (window.turnstile) {
         this.renderTurnstile();
         return;
@@ -244,6 +264,7 @@ export default {
       const existingScript = document.querySelector('script[data-turnstile]');
       if (existingScript) {
         existingScript.addEventListener('load', this.renderTurnstile, { once: true });
+        existingScript.addEventListener('error', this.handleTurnstileError, { once: true });
         return;
       }
 
@@ -253,6 +274,7 @@ export default {
       script.defer = true;
       script.dataset.turnstile = 'true';
       script.onload = this.renderTurnstile;
+      script.onerror = this.handleTurnstileError;
       document.head.appendChild(script);
     },
     renderTurnstile() {
@@ -260,25 +282,46 @@ export default {
         return;
       }
 
-      this.turnstileWidgetId = window.turnstile.render(this.$refs.turnstileContainer, {
-        sitekey: this.turnstileSiteKey,
-        theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
-        callback: (token) => {
-          this.captchaToken = token;
-        },
-        'expired-callback': () => {
-          this.captchaToken = '';
-        },
-        'error-callback': () => {
-          this.captchaToken = '';
+      try {
+        if (this.turnstileWidgetId !== null) {
+          window.turnstile.remove?.(this.turnstileWidgetId);
         }
-      });
+        this.$refs.turnstileContainer.innerHTML = '';
+        this.turnstileWidgetId = window.turnstile.render(this.$refs.turnstileContainer, {
+          sitekey: this.turnstileSiteKey,
+          theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
+          callback: (token) => {
+            this.captchaToken = token;
+          },
+          'expired-callback': () => {
+            this.captchaToken = '';
+          },
+          'error-callback': () => {
+            this.captchaToken = '';
+          }
+        });
+        this.turnstileStatus = this.turnstileWidgetId === null ? 'error' : 'ready';
+      } catch (error) {
+        this.turnstileStatus = 'error';
+      }
+    },
+    handleTurnstileError() {
+      this.turnstileStatus = 'error';
     },
     async handleSubmit() {
       this.isSubmitting = true;
       this.formStatus.show = false;
 
       try {
+        if (this.turnstileEnabled && this.turnstileStatus === 'error') {
+          this.formStatus = {
+            show: true,
+            isError: true,
+            message: this.$t('contact.captchaUnavailable')
+          };
+          return;
+        }
+
         if (this.turnstileEnabled && !this.captchaToken) {
           this.formStatus = {
             show: true,
@@ -315,7 +358,9 @@ export default {
 
         const result = await response.json().catch(() => ({}));
         if (!response.ok || !result.ok) {
-          throw new Error(result.message || 'Request failed');
+          const error = new Error(result.message || 'Request failed');
+          error.code = result.code;
+          throw error;
         }
 
         this.formStatus = {
@@ -336,10 +381,18 @@ export default {
           window.turnstile.reset(this.turnstileWidgetId);
         }
       } catch (error) {
+        const fallbackMessage = this.$t('contact.errorMessage');
+        const errorCode = typeof error?.code === 'string' ? error.code : '';
+        const mappedKey = errorCode ? ERROR_CODE_TO_MESSAGE_KEY[errorCode] : '';
+        const mappedMessage = mappedKey ? this.$t(mappedKey) : '';
+        const serverMessage = typeof error?.message === 'string' ? error.message : '';
+        const message = mappedMessage || (serverMessage && serverMessage !== 'Request failed' && serverMessage !== 'Failed to fetch'
+          ? serverMessage
+          : fallbackMessage);
         this.formStatus = {
           show: true,
           isError: true,
-          message: this.$t('contact.errorMessage')
+          message
         };
       } finally {
         this.isSubmitting = false;

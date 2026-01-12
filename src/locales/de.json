@@ -111,6 +111,7 @@
     "otherWaysTitle": "Weitere Kontaktwege",
     "otherWaysDescription": "Sie erreichen mich auch über Profile oder den Lebenslauf:",
     "captchaLabel": "Spam-Schutz",
+    "captchaUnavailable": "Captcha konnte nicht geladen werden. Bitte deaktivieren Sie Werbeblocker oder versuchen Sie es erneut.",
     "captchaRequired": "Bitte bestätigen Sie das Captcha, um die Nachricht zu senden.",
     "honeypotLabel": "Firma",
     "cvLabel": "Lebenslauf (PDF, Deutsch)",
@@ -125,7 +126,18 @@
     "send": "Nachricht senden",
     "sending": "Wird gesendet...",
     "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei Ihnen melden.",
-    "errorMessage": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail."
+    "errorMessage": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail.",
+    "errorInvalidName": "Bitte geben Sie einen gültigen Namen ein.",
+    "errorInvalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "errorInvalidSubject": "Bitte geben Sie einen gültigen Betreff ein.",
+    "errorInvalidMessage": "Bitte geben Sie eine gültige Nachricht ein.",
+    "errorCaptchaUnavailable": "Captcha ist derzeit nicht verfügbar. Bitte versuchen Sie es erneut oder kontaktieren Sie mich per E-Mail.",
+    "errorCaptchaFailed": "Captcha-Prüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "errorEmailServiceNotConfigured": "E-Mail-Service ist nicht konfiguriert. Bitte kontaktieren Sie mich direkt per E-Mail.",
+    "errorEmailDeliveryFailed": "E-Mail konnte nicht versendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail.",
+    "errorOriginNotAllowed": "Anfragen von dieser Domain sind nicht erlaubt.",
+    "errorRateLimited": "Zu viele Anfragen. Bitte versuchen Sie es später erneut.",
+    "errorServer": "Serverfehler. Bitte versuchen Sie es später erneut."
   },
   "footer": {
     "description": "Professionelle Webentwicklung und technische Beratung für Ihre individuellen Projekte.",
@@ -144,7 +156,7 @@
     "contact": {
       "heading": "Kontakt",
       "emailLabel": "E-Mail",
-      "emailAddress": "kontakt{'@'}timo-achtelik.de"
+      "emailAddress": "projects{'@'}timo-achtelik.de"
     },
     "disclaimerHeading": "Haftungsausschluss",
     "linkLiabilityHeading": "Haftung für Links",
@@ -165,7 +177,7 @@
     "rightsHeading": "Ihre Rechte",
     "rightsText": "Sie haben das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft, Empfänger und Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.<br />Außerdem haben Sie das Recht, die Verarbeitung Ihrer personenbezogenen Daten einzuschränken, der Verarbeitung zu widersprechen sowie das Recht auf Datenübertragbarkeit.<br />Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Kontaktadresse an uns wenden.<br />Zudem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde für Datenschutzfragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem unser Unternehmen seinen Sitz hat.",
     "contactHeading": "Kontakt bei Datenschutzfragen",
-    "contactText": "Wenn Sie Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten haben, zu Auskünften, Berichtigung, Sperrung oder Löschung von Daten oder zum Widerruf erteilter Einwilligungen, wenden Sie sich bitte an die im Impressum angegebene E-Mail-Adresse:<br /><a href=\"mailto:kontakt{'@'}timo-achtelik.de\" class=\"underline hover:no-underline\">kontakt{'@'}timo-achtelik.de</a>"
+    "contactText": "Wenn Sie Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten haben, zu Auskünften, Berichtigung, Sperrung oder Löschung von Daten oder zum Widerruf erteilter Einwilligungen, wenden Sie sich bitte an die im Impressum angegebene E-Mail-Adresse:<br /><a href=\"mailto:{email}\" class=\"underline hover:no-underline\">{email}</a>"
   },
    "about": {
     "title": "Über mich",

@@ -10,13 +10,24 @@ app.disable('x-powered-by');
 app.set('trust proxy', 1);
 app.use(express.json({ limit: '50kb' }));
 
-const allowedOrigin = process.env.CONTACT_ALLOWED_ORIGIN;
+const allowedOrigins = (process.env.CONTACT_ALLOWED_ORIGINS || process.env.CONTACT_ALLOWED_ORIGIN || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+const hasAllowedOrigins = allowedOrigins.length > 0;
 app.use((req, res, next) => {
-  if (allowedOrigin) {
-    res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
-    res.setHeader('Vary', 'Origin');
-    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  const origin = req.headers.origin;
+
+  if (hasAllowedOrigins) {
+    if (origin && allowedOrigins.includes(origin)) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+      res.setHeader('Vary', 'Origin');
+      res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    } else if (origin) {
+      sendError(res, 403, 'ORIGIN_NOT_ALLOWED', 'Origin not allowed.');
+      return;
+    }
   }
 
   if (req.method === 'OPTIONS') {
@@ -31,16 +42,31 @@ const contactLimiter = rateLimit({
   windowMs: 10 * 60 * 1000,
   max: 8,
   standardHeaders: true,
-  legacyHeaders: false
+  legacyHeaders: false,
+  handler: (req, res) => {
+    sendError(res, 429, 'RATE_LIMITED', 'Too many requests.');
+  }
 });
 
 const resendApiKey = process.env.RESEND_API_KEY || '';
-const contactFrom = process.env.CONTACT_FROM_EMAIL || '';
-const contactTo = process.env.CONTACT_TO_EMAIL || 'timo.achtelik@gmail.com';
+const contactFromDefault = process.env.CONTACT_FROM_EMAIL || '';
+const contactToDefault = process.env.CONTACT_TO_EMAIL || '';
+const contactFromByMode = {
+  freelance: process.env.CONTACT_FROM_EMAIL_FREELANCE,
+  application: process.env.CONTACT_FROM_EMAIL_APPLICATION
+};
+const contactToByMode = {
+  freelance: process.env.CONTACT_TO_EMAIL_FREELANCE,
+  application: process.env.CONTACT_TO_EMAIL_APPLICATION
+};
 const turnstileSecret = process.env.TURNSTILE_SECRET || '';
 const resend = new Resend(resendApiKey);
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function sendError(res, status, code, message) {
+  res.status(status).json({ ok: false, code, message });
+}
 
 function escapeHtml(value = '') {
   return value
@@ -53,7 +79,7 @@ function escapeHtml(value = '') {
 
 async function verifyTurnstile(token, ip) {
   if (!turnstileSecret) {
-    return { success: false, message: 'Captcha not configured.' };
+    return { success: false, code: 'CAPTCHA_NOT_CONFIGURED', message: 'Captcha not configured.' };
   }
 
   const body = new URLSearchParams({
@@ -68,12 +94,12 @@ async function verifyTurnstile(token, ip) {
   });
 
   if (!response.ok) {
-    return { success: false, message: 'Captcha verification failed.' };
+    return { success: false, code: 'CAPTCHA_VERIFICATION_FAILED', message: 'Captcha verification failed.' };
   }
 
   const data = await response.json();
   if (!data.success) {
-    return { success: false, message: 'Captcha verification failed.' };
+    return { success: false, code: 'CAPTCHA_VERIFICATION_FAILED', message: 'Captcha verification failed.' };
   }
 
   return { success: true };
@@ -101,8 +127,12 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       return;
     }
 
-    if (!resendApiKey || !contactFrom) {
-      res.status(500).json({ ok: false, message: 'Email service not configured.' });
+    const mode = typeof profileMode === 'string' ? profileMode.toLowerCase() : '';
+    const contactFrom = contactFromByMode[mode] || contactFromDefault;
+    const contactTo = contactToByMode[mode] || contactToDefault;
+
+    if (!resendApiKey || !contactFrom || !contactTo) {
+      sendError(res, 500, 'EMAIL_SERVICE_NOT_CONFIGURED', 'Email service not configured.');
       return;
     }
 
@@ -110,29 +140,29 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     const trimmedSubject = subject?.trim?.() || '';
     const trimmedMessage = message?.trim?.() || '';
 
-    if (trimmedName.length < 2 || trimmedName.length > 120) {
-      res.status(400).json({ ok: false, message: 'Invalid name.' });
+    if (trimmedName.length < 1 || trimmedName.length > 120) {
+      sendError(res, 400, 'INVALID_NAME', 'Invalid name.');
       return;
     }
 
     if (!email || typeof email !== 'string' || !emailRegex.test(email)) {
-      res.status(400).json({ ok: false, message: 'Invalid email.' });
+      sendError(res, 400, 'INVALID_EMAIL', 'Invalid email.');
       return;
     }
 
-    if (trimmedSubject.length < 3 || trimmedSubject.length > 120) {
-      res.status(400).json({ ok: false, message: 'Invalid subject.' });
+    if (trimmedSubject.length < 1 || trimmedSubject.length > 200) {
+      sendError(res, 400, 'INVALID_SUBJECT', 'Invalid subject.');
       return;
     }
 
-    if (trimmedMessage.length < 10 || trimmedMessage.length > 4000) {
-      res.status(400).json({ ok: false, message: 'Invalid message.' });
+    if (trimmedMessage.length < 1 || trimmedMessage.length > 8000) {
+      sendError(res, 400, 'INVALID_MESSAGE', 'Invalid message.');
       return;
     }
 
     const captcha = await verifyTurnstile(token, req.ip);
     if (!captcha.success) {
-      res.status(400).json({ ok: false, message: captcha.message });
+      sendError(res, 400, captcha.code || 'CAPTCHA_VERIFICATION_FAILED', captcha.message);
       return;
     }
 
@@ -152,7 +182,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       trimmedMessage
     ].join('\n');
 
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: contactFrom,
       to: contactTo,
       replyTo: email,
@@ -168,10 +198,16 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
       `
     });
 
+    if (error) {
+      console.error('Resend error:', error);
+      sendError(res, 502, 'EMAIL_DELIVERY_FAILED', 'Email delivery failed.');
+      return;
+    }
+
     res.json({ ok: true });
   } catch (error) {
     console.error('Contact error:', error);
-    res.status(500).json({ ok: false, message: 'Server error.' });
+    sendError(res, 500, 'SERVER_ERROR', 'Server error.');
   }
 });
 

@@ -32,7 +32,8 @@
            {{ $t('imprint.contact.heading') }}
         </h2>
         <p class="mb-4 text-primary dark:text-accent">
-          {{ $t('imprint.contact.emailLabel') }}: <a :href="'mailto:' + $t('imprint.contact.emailAddress')" class="underline hover:no-underline">{{ $t('imprint.contact.emailAddress') }}</a>
+          {{ $t('imprint.contact.emailLabel') }}:
+          <a :href="`mailto:${contactEmail}`" class="underline hover:no-underline">{{ contactEmail }}</a>
         </p>
 
         <!-- Basic Disclaimers (Highly Recommended) -->
@@ -60,3 +61,16 @@
     </div>
   </section>
 </template>
+
+<script>
+import { SITE_CONFIG } from '../config/site';
+
+export default {
+  name: 'Imprint',
+  computed: {
+    contactEmail() {
+      return SITE_CONFIG.contactEmail;
+    },
+  },
+};
+</script>
