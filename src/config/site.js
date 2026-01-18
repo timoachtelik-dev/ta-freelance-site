@@ -34,11 +34,10 @@ export const SITE_CONFIG = {
     },
   ],
   references: [
-    // {
-    //   title: 'Project name',
-    //   description: 'Short description of the work and outcome.',
-    //   imageSrc: '/references/project.jpg',
-    //   url: 'https://example.com',
-    // }
+    {
+      title: 'Recipe Hub',
+      description: 'Live demo app: recipes, discovery, and shopping lists.',
+      url: 'https://recipe-hub.timo-achtelik.de/',
+    },
   ],
 };
