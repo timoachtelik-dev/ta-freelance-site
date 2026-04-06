@@ -13,6 +13,30 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import { watch } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { SITE_CONFIG, PROFILE_MODES } from './config/site';
+
+const applyDocumentTitle = (title) => {
+  if (!title) {
+    return;
+  }
+  document.title = title;
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) {
+    ogTitle.setAttribute('content', title);
+    return;
+  }
+
+  const meta = document.createElement('meta');
+  meta.setAttribute('property', 'og:title');
+  meta.setAttribute('content', title);
+  document.head.appendChild(meta);
+};
+
+const getTitleKey = () => (
+  SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION
+    ? 'meta.title.application'
+    : 'meta.title.freelance'
+);
 export default {
   components: { Navbar, Footer },
   data() {
@@ -21,10 +45,17 @@ export default {
     }
   },
   setup() {
-    const { locale } = useI18n();
+    const { locale, t } = useI18n();
+
+    const updateMeta = () => {
+      const title = t(getTitleKey());
+      applyDocumentTitle(title);
+    };
+
     watch(locale, (newLocale) => {
       document.documentElement.lang = newLocale;
-    });
+      updateMeta();
+    }, { immediate: true });
   },
   methods: {
     toggleTheme() {

@@ -6,12 +6,18 @@
     "contact": "Contact",
     "focusAreas": "Focus Areas"
   },
+  "meta": {
+    "title": {
+      "freelance": "Timo Achtelik - Freelance Developer",
+      "application": "Timo Achtelik - Lead Software Engineer"
+    }
+  },
   "home": {
     "headline": "Hi, I'm Timo Achtelik",
-    "subline": "Senior Software Engineer & Freelancer for Web Development and Technical Consulting",
+    "subline": "Lead Software Engineer & Freelancer for Web Development and Technical Consulting",
     "freelanceKeywords": "Vibe Coding, codebase cleanup specialist, legacy cleanup, and pragmatic refactoring for long-term maintainability.",
     "applicationHeadline": "Hi, I'm Timo Achtelik",
-    "applicationSubline": "Senior Software Engineer focused on modern web platforms and scalable systems",
+    "applicationSubline": "Lead Software Engineer focused on modern web platforms and scalable systems",
     "cta": {
       "cv": "View CV (PDF)",
       "linkedin": "LinkedIn"
@@ -115,7 +121,7 @@
     "captchaUnavailable": "Captcha could not be loaded. Disable ad blockers or try again.",
     "captchaRequired": "Please complete the captcha to send your message.",
     "honeypotLabel": "Company",
-    "cvLabel": "CV (PDF, German)",
+    "cvLabel": "CV (PDF, English)",
     "name": "Name",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "your-email{'@'}example.com",
@@ -185,27 +191,33 @@
     "intro": {
       "title": "My Journey Into Code",
       "content1": "From a young age, I was fascinated by computers, a passion that led me to pursue a technical bachelor's degree in computer science. It was there I had my first contact with development, and I enjoyed it from the very beginning. This passion has been the driving force through my entire career, from my first internship to my current role as a freelance developer.",
-      "content2": "My journey is defined by a commitment to learning and growth. I quickly progressed from a Junior to a Senior Developer, a testament to my ability to master new technologies and deliver results. I bring a well-developed, modern skill set combined with a strong sense of responsibility and a commitment to quality for every project I undertake.",
+      "content2": "My journey is defined by a commitment to learning and growth. I quickly progressed from a Junior to a Lead Developer, a testament to my ability to master new technologies and deliver results. I bring a well-developed, modern skill set combined with a strong sense of responsibility and a commitment to quality for every project I undertake.",
       "applicationContent1": "In my work, good software rarely comes from individual standout features. It comes from clear structures, clean interfaces, and decisions that hold up over time. I focus on systems that remain understandable for teams joining months later.",
       "applicationContent2": "I enjoy working on complex systems, but not complicated ones. When architectural decisions are needed, I aim for solutions that keep room to move instead of creating new dependencies. For me, quality means maintainability under real-world conditions.",
-      "applicationContent3": "For about a year I have used Vibe Coding to structure thinking, compare options, and make decisions traceable. I look for a role where I can contribute beyond implementation — technically, structurally, and in collaboration with other engineers."
+      "applicationContent3": "For about a year I have used Vibe Coding to structure thinking, compare options, and make decisions traceable. I look for a role where I can contribute beyond implementation - technically, structurally, and in collaboration with other engineers."
     },
     "experience": {
       "title": "Professional Experience",
       "jobs": {
-        "job1": {
-          "title": "Senior Software Engineer",
+         "job1": {
+          "title": "Lead Software Engineer",
           "company": "BAYOOTEC GmbH",
-          "period": "2024 - Present",
-          "description": "As a Senior Engineer, I take full ownership of complex frontend and backend challenges. My focus is on designing scalable software architectures, ensuring high code quality through unit testing, and driving projects forward in an agile (Scrum) environment."
+          "period": "2026 - Present",
+          "description": "As a Lead Software Engineer, I take responsibility not only for technical solutions but also for the growth of the team. I support engineers in their professional development, coordinate technical decisions across team boundaries, and serve as a go-to person for complex challenges throughout the entire development process."
         },
         "job2": {
+          "title": "Senior Software Engineer",
+          "company": "BAYOOTEC GmbH",
+          "period": "2024 - 2026",
+          "description": "As a Senior Engineer, I take full ownership of complex frontend and backend challenges. My focus is on designing scalable software architectures, ensuring high code quality through unit testing, and driving projects forward in an agile (Scrum) environment."
+        },
+        "job3": {
           "title": "Junior Software Engineer",
           "company": "BAYOOTEC GmbH",
           "period": "2023 - 2024",
           "description": "In my role as a Junior Full-Stack Developer, I was responsible for developing and maintaining web applications using technologies like Vue.js, Node.js, and C#. I actively contributed to the team's agile processes and quickly proved my ability to tackle complex problems independently."
         },
-        "job3": {
+        "job4": {
           "title": "Working Student Developer",
           "company": "BAYOONET AG",
           "period": "2017 - 2023",
@@ -222,18 +234,24 @@
         "description": "Master's degree focused on advanced software architecture, system development, and modern software engineering principles."
       },
       "edu2": {
+        "degree": "Exchange Semester Computer Science",
+        "school": "Concordia University of Edmonton, Canada",
+        "period": "Aug - Dec 2018",
+        "description": "Spending a semester living and studying in Edmonton was a memorable experience. Beyond the 7.5 credit points, I got to explore a new culture, meet people from all over the world, and broaden my perspective in ways that stayed with me long after."
+      },
+      "edu3": {
         "degree": "B.Sc. Computer Science (Communication & Media)",
         "school": "University of Applied Sciences Darmstadt",
         "period": "2016 - 2020",
-       "description": "Bachelor's degree combining a strong IT foundation with media design and user-centered communication concepts. This included a semester abroad studying Computer Science at Concordia University of Edmonton, Canada."
+        "description": "Bachelor's degree combining a strong IT foundation with media design and user-centered communication concepts."
       },
-      "edu3": {
+      "edu4": {
         "degree": "Apprenticeship, Software Developer",
         "school": "Sage Software GmbH",
         "period": "2014 - 2016",
         "description": "Gained foundational web development skills using HTML, CSS, and AngularJS while working on the 'Sage Office Online' product."
       },
-      "edu4": {
+      "edu5": {
         "degree": "Internship, IT",
         "school": "Software AG",
         "period": "2012 - 2013",

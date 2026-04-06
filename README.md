@@ -90,7 +90,7 @@ Optional per Env (Build-Zeit):
 - `VITE_PROFILE_MODE=freelance` oder `VITE_PROFILE_MODE=application`
 
 Assets:
-- CV liegt unter `src/assets/Lebenslauf_Achtelik_Timo.pdf`
+- CV liegt unter `src/assets`
 - Portrait bitte unter `src/assets/portrait.jpg` ablegen (und `portraitSrc` im Config setzen)
 
 ## 🧱 Projektstruktur

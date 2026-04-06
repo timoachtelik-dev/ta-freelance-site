@@ -123,7 +123,7 @@
 </template>
 
 <script>
-import { SITE_CONFIG, PROFILE_MODES } from '../config/site';
+import { SITE_CONFIG, PROFILE_MODES, getCvUrlForLocale } from '../config/site';
 
 export default {
   computed: {
@@ -131,7 +131,9 @@ export default {
       return SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION;
     },
     cvUrl() {
-      return SITE_CONFIG.cvUrl;
+      const locale = this.$i18n?.locale;
+      const localeValue = typeof locale === 'string' ? locale : locale?.value || 'de';
+      return getCvUrlForLocale(localeValue);
     },
     linkedinUrl() {
       const profile = SITE_CONFIG.profiles.find((item) => item.name === 'LinkedIn');

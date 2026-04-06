@@ -3,7 +3,12 @@ export const PROFILE_MODES = {
   APPLICATION: 'application',
 };
 
-const cvUrl = new URL('../assets/Lebenslauf_Achtelik_Timo.pdf', import.meta.url).href;
+const cvUrls = {
+  de: new URL('../assets/CV_Achtelik_Timo_de.pdf', import.meta.url).href,
+  en: new URL('../assets/CV_Achtelik_Timo_en.pdf', import.meta.url).href,
+};
+
+export const getCvUrlForLocale = (locale = 'de') => cvUrls[locale] || cvUrls.de;
 
 const envProfileMode = ((import.meta.env && import.meta.env.VITE_PROFILE_MODE) || '').toLowerCase();
 const resolvedProfileMode = Object.values(PROFILE_MODES).includes(envProfileMode)
@@ -20,7 +25,8 @@ export const SITE_CONFIG = {
   profileMode: resolvedProfileMode,
   contactEmail: resolvedContactEmail,
   contactEmails,
-  cvUrl,
+  cvUrl: cvUrls.de,
+  cvUrls,
   portraitSrc: new URL('../assets/portrait.jpg', import.meta.url).href,
   portraitAlt: 'Portrait of Timo Achtelik',
   profiles: [
@@ -36,7 +42,8 @@ export const SITE_CONFIG = {
   references: [
     {
       title: 'Recipe Hub',
-      description: 'Live demo app: recipes, discovery, and shopping lists.',
+      description: 'Personal project showcasing recipes, discovery, and shopping lists.',
+      imageSrc: 'https://image.thum.io/get/width/1200/https://recipe-hub.timo-achtelik.de/',
       url: 'https://recipe-hub.timo-achtelik.de/',
     },
   ],
