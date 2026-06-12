@@ -13,7 +13,7 @@ export default {
         surface: '#EFECE8',   // Soft card surface
         surfaceDark: '#2A3445', // Dark card surface
         accent: '#B08968',    // Muted sand
-        highlight: '#64748B', // Cool slate
+        highlight: '#57657B', // Cool slate (>=4.5:1 contrast for light text on background)
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

@@ -4,7 +4,12 @@
     "services": "Leistungen",
     "about": "Über mich",
     "contact": "Kontakt",
-    "focusAreas": "Schwerpunkte"
+    "focusAreas": "Schwerpunkte",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "switchToEnglish": "Sprache wechseln zu Englisch",
+    "switchToGerman": "Sprache wechseln zu Deutsch",
+    "toggleTheme": "Farbschema umschalten"
   },
   "meta": {
     "title": {

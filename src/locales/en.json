@@ -4,7 +4,12 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "focusAreas": "Focus Areas"
+    "focusAreas": "Focus Areas",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToEnglish": "Switch language to English",
+    "switchToGerman": "Switch language to German",
+    "toggleTheme": "Toggle dark mode"
   },
   "meta": {
     "title": {

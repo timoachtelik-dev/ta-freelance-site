@@ -16,18 +16,19 @@
       </router-link>
       
       <!-- Language Toggle -->
-      <button 
-        @click="toggleLanguage" 
+      <button
+        @click="toggleLanguage"
         class="text-secondary dark:text-background hover:text-primary dark:hover:text-accent transition-colors"
+        :aria-label="languageToggleLabel"
       >
         {{ currentLocale === 'de' ? 'EN' : 'DE' }}
       </button>
-      
+
       <!-- Dark Mode Toggle -->
-      <button 
-        @click="$emit('toggle-theme')" 
+      <button
+        @click="$emit('toggle-theme')"
         class="text-secondary dark:text-background hover:text-primary dark:hover:text-accent transition-colors"
-        aria-label="Toggle dark mode"
+        :aria-label="$t('nav.toggleTheme')"
       >
         <svg v-if="darkMode" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -39,9 +40,12 @@
     </div>
     
     <!-- Mobile Menu Button -->
-    <button 
-      @click="mobileMenuOpen = !mobileMenuOpen" 
+    <button
+      @click="mobileMenuOpen = !mobileMenuOpen"
       class="md:hidden text-secondary dark:text-background"
+      :aria-label="mobileMenuOpen ? $t('nav.closeMenu') : $t('nav.openMenu')"
+      :aria-expanded="mobileMenuOpen"
+      aria-controls="mobile-menu"
     >
       <svg v-if="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -53,7 +57,7 @@
   </nav>
   
   <!-- Mobile Menu -->
-  <div v-if="mobileMenuOpen" class="md:hidden bg-background dark:bg-secondaryDark border-b border-primary/10 shadow-md">
+  <div v-if="mobileMenuOpen" id="mobile-menu" class="md:hidden bg-background dark:bg-secondaryDark border-b border-primary/10 shadow-md">
     <div class="flex flex-col px-6 py-4 space-y-4">
       <router-link 
         v-for="item in navItems" 
@@ -67,9 +71,10 @@
       </router-link>
       
       <div class="flex justify-between pt-2 border-t border-primary/10">
-        <button 
-          @click="toggleLanguage" 
+        <button
+          @click="toggleLanguage"
           class="text-secondary dark:text-background hover:text-primary dark:hover:text-accent transition-colors"
+          :aria-label="languageToggleLabel"
         >
           {{ currentLocale === 'de' ? 'EN' : 'DE' }}
         </button>
@@ -102,6 +107,11 @@ export default {
   computed: {
     currentLocale() {
       return this.$i18n.global?.locale?.value || this.$i18n.locale;
+    },
+    languageToggleLabel() {
+      return this.currentLocale === 'de'
+        ? this.$t('nav.switchToEnglish')
+        : this.$t('nav.switchToGerman');
     },
     isApplicationMode() {
       return SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION;

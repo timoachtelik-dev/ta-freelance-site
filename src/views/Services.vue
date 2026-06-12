@@ -129,7 +129,7 @@
         {{ isApplicationMode ? $t('focus.ctaDescription') : $t('contact.description') }}
       </p>
       <div class="mt-8">
-        <router-link to="/contact" class="inline-block bg-accent hover:bg-highlight text-background px-8 py-3 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 font-medium">
+        <router-link to="/contact" class="inline-block bg-accent hover:bg-accent/90 text-secondary px-8 py-3 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 font-medium">
           {{ isApplicationMode ? $t('focus.ctaButton') : $t('contact.button_text') }}
         </router-link>
       </div>

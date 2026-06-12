@@ -9,7 +9,7 @@
         <p class="mt-6 text-xl text-primary dark:text-accent">
           {{ isApplicationMode ? $t('home.applicationSubline') : $t('home.subline') }}
         </p>
-        <p v-if="!isApplicationMode" class="mt-4 text-sm text-primary/80 dark:text-accent/80">
+        <p v-if="!isApplicationMode" class="mt-4 text-sm text-primary dark:text-accent">
           {{ $t('home.freelanceKeywords') }}
         </p>
         <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -17,7 +17,7 @@
             <router-link to="/services" class="bg-highlight hover:bg-highlight/90 text-background px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 font-medium text-center">
               {{ $t('nav.services') }}
             </router-link>
-            <router-link to="/contact" class="bg-accent hover:bg-accent/90 text-background px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 font-medium text-center">
+            <router-link to="/contact" class="bg-accent hover:bg-accent/90 text-secondary px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 font-medium text-center">
               {{ $t('nav.contact') }}
             </router-link>
           </template>
@@ -25,7 +25,7 @@
             <a :href="cvUrl" target="_blank" rel="noopener noreferrer" class="bg-highlight hover:bg-highlight/90 text-background px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 font-medium text-center">
               {{ $t('home.cta.cv') }}
             </a>
-            <a v-if="linkedinUrl" :href="linkedinUrl" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accent/90 text-background px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 font-medium text-center">
+            <a v-if="linkedinUrl" :href="linkedinUrl" target="_blank" rel="noopener noreferrer" class="bg-accent hover:bg-accent/90 text-secondary px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 font-medium text-center">
               {{ $t('home.cta.linkedin') }}
             </a>
           </template>

@@ -19,7 +19,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('contact.email') }}</h3>
+            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('contact.email') }}</h2>
           </div>
           <p class="text-primary dark:text-accent mb-4">{{ $t('contact.emailDescription') }}</p>
           <a :href="`mailto:${contactEmail}`" class="text-highlight hover:text-accent dark:text-accent dark:hover:text-highlight font-medium transition-colors duration-300 flex items-center">
@@ -38,16 +38,16 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('contact.response') }}</h3>
+            <h2 class="ml-4 text-xl font-semibold text-secondary dark:text-background">{{ $t('contact.response') }}</h2>
           </div>
           <p class="text-primary dark:text-accent">{{ $t('contact.responseDescription') }}</p>
         </div>
       </div>
 
       <div class="bg-surface dark:bg-surfaceDark rounded-lg shadow-subtle p-6 mb-12">
-        <h3 class="text-xl font-semibold text-secondary dark:text-background mb-2">
+        <h2 class="text-xl font-semibold text-secondary dark:text-background mb-2">
           {{ $t('contact.otherWaysTitle') }}
-        </h3>
+        </h2>
         <p class="text-primary dark:text-accent">
           {{ $t('contact.otherWaysDescription') }}
         </p>
@@ -56,7 +56,7 @@
             :href="cvUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center px-4 py-2 rounded-md bg-highlight text-white hover:bg-accent transition-colors duration-200"
+            class="inline-flex items-center px-4 py-2 rounded-md bg-highlight text-white hover:bg-highlight/90 transition-colors duration-200"
           >
             {{ $t('contact.cvLabel') }}
           </a>
@@ -154,7 +154,7 @@
           <div>
             <button 
               type="submit" 
-              class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-highlight hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-all duration-300 shadow-subtle hover:shadow-md"
+              class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-highlight hover:bg-highlight/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-all duration-300 shadow-subtle hover:shadow-md"
               :disabled="isSubmitting"
             >
               <span v-if="isSubmitting" class="flex items-center" >
