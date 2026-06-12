@@ -15,7 +15,7 @@
   "home": {
     "headline": "Hi, I'm Timo Achtelik",
     "subline": "Lead Software Engineer & Freelancer for Web Development and Technical Consulting",
-    "freelanceKeywords": "Vibe Coding, codebase cleanup specialist, legacy cleanup, and pragmatic refactoring for long-term maintainability.",
+    "freelanceKeywords": "Codebase modernization, legacy refactoring, and pragmatic architecture for long-term maintainability.",
     "applicationHeadline": "Hi, I'm Timo Achtelik",
     "applicationSubline": "Lead Software Engineer focused on modern web platforms and scalable systems",
     "cta": {
@@ -24,7 +24,12 @@
     },
     "references": {
       "title": "References",
-      "subtitle": "Selected work and outcomes from recent projects."
+      "subtitle": "Selected work and outcomes from recent projects.",
+      "items": {
+        "recipeHub": {
+          "description": "Personal full-stack project showcasing recipes, discovery, and shopping lists."
+        }
+      }
     },
     "skills": {
       "headline": "Skills",
@@ -48,13 +53,13 @@
       "skill_architecture": "Software & System Architecture Planning",
       "skill_reviews": "Code Reviews & Quality Assurance",
       "skill_tech_selection": "Technology Stack Selection & Evaluation",
-      "skill_vibe_coding": "Vibe Coding for structured decision-making",
+      "skill_ai_assisted": "AI-assisted development adoption (e.g., Claude Code, GitHub Copilot)",
       "skill_seo": "Technical SEO Audits & Optimization"
     },
     "modernization": {
       "title": "Legacy System Modernization",
       "description": "Breathing new life into older applications by migrating them to modern technology stacks, improving performance, security, and maintainability.",
-      "skill_analysis": "Analysis of existing legacy systems (e.g., AngularJS)",
+      "skill_analysis": "Analysis of existing legacy systems and frontends",
       "skill_migration": "Phased migration strategies to Vue.js or Nuxt.js",
       "skill_refactoring": "Codebase refactoring for improved readability",
       "skill_integration": "Integration with modern APIs and services"
@@ -194,7 +199,7 @@
       "content2": "My journey is defined by a commitment to learning and growth. I quickly progressed from a Junior to a Lead Developer, a testament to my ability to master new technologies and deliver results. I bring a well-developed, modern skill set combined with a strong sense of responsibility and a commitment to quality for every project I undertake.",
       "applicationContent1": "In my work, good software rarely comes from individual standout features. It comes from clear structures, clean interfaces, and decisions that hold up over time. I focus on systems that remain understandable for teams joining months later.",
       "applicationContent2": "I enjoy working on complex systems, but not complicated ones. When architectural decisions are needed, I aim for solutions that keep room to move instead of creating new dependencies. For me, quality means maintainability under real-world conditions.",
-      "applicationContent3": "For about a year I have used Vibe Coding to structure thinking, compare options, and make decisions traceable. I look for a role where I can contribute beyond implementation - technically, structurally, and in collaboration with other engineers."
+      "applicationContent3": "As AI Ambassador at BAYOOTEC, I drive the adoption of AI-assisted development in our engineering teams - including Claude Code and GitHub Copilot. I care about keeping technical decisions traceable and applying tools where they deliver measurable value. I look for a role where I can contribute beyond implementation - technically, structurally, and in collaboration with other engineers."
     },
     "experience": {
       "title": "Professional Experience",
@@ -249,7 +254,7 @@
         "degree": "Apprenticeship, Software Developer",
         "school": "Sage Software GmbH",
         "period": "2014 - 2016",
-        "description": "Gained foundational web development skills using HTML, CSS, and AngularJS while working on the 'Sage Office Online' product."
+        "description": "Gained foundational web development skills using HTML, CSS, and JavaScript while working on the 'Sage Office Online' product."
       },
       "edu5": {
         "degree": "Internship, IT",

@@ -87,7 +87,7 @@ onMounted(() => {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Timo Achtelik",
-      "url": "https://timo-achtelik.dev/about",
+      "url": "https://profile.timo-achtelik.de/about",
       "jobTitle": "Freelance Software Engineer & Technical Consultant",
       "sameAs": [
         "https://www.xing.com/profile/Timo_Achtelik2/web_profiles"

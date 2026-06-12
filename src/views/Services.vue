@@ -41,7 +41,7 @@
           </div>
           <p class="text-secondary/80 dark:text-background/80 leading-relaxed">{{ $t('services.consulting.description') }}</p>
           <div class="mt-6 space-y-3">
-             <div class="flex items-center" v-for="skill in ['skill_architecture', 'skill_reviews', 'skill_tech_selection', 'skill_vibe_coding', 'skill_seo']" :key="skill">
+             <div class="flex items-center" v-for="skill in ['skill_architecture', 'skill_reviews', 'skill_tech_selection', 'skill_ai_assisted', 'skill_seo']" :key="skill">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
               <span class="ml-2 text-secondary/90 dark:text-background/90">{{ $t(`services.consulting.${skill}`) }}</span>
             </div>

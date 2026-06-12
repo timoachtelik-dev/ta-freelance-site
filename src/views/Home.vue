@@ -113,7 +113,7 @@
               {{ reference.title }}
             </h3>
             <p class="mt-2 text-secondary/80 dark:text-background/80">
-              {{ reference.description }}
+              {{ $t(reference.descriptionKey) }}
             </p>
           </div>
         </a>
@@ -147,7 +147,7 @@ export default {
     const schema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "url": "https://timo-achtelik.dev/",
+      "url": "https://profile.timo-achtelik.de/",
       "name": "Timo Achtelik",
       "author": {
         "@type": "Person",
@@ -183,7 +183,7 @@ export default {
           textClass: 'text-highlight dark:text-highlight'
         },
         {
-          name: 'AngularJS',
+          name: 'Angular',
           icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M12 2L3 5v11l9 4 9-4V5L12 2Z" /><path d="m3 5 9 4 9-4" /><path d="M12 2v20" /><path d="m21 16-9-4" /><path d="m3 16 9-4" /><path d="m9 8 3 4 3-4" /><path d="M12 12v4" /></svg>',
           bgClass: 'bg-accent/10 dark:bg-accent/20',
           textClass: 'text-accent dark:text-accent'

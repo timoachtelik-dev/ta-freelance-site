@@ -42,7 +42,7 @@ export const SITE_CONFIG = {
   references: [
     {
       title: 'Recipe Hub',
-      description: 'Personal project showcasing recipes, discovery, and shopping lists.',
+      descriptionKey: 'home.references.items.recipeHub.description',
       imageSrc: 'https://image.thum.io/get/width/1200/https://recipe-hub.timo-achtelik.de/',
       url: 'https://recipe-hub.timo-achtelik.de/',
     },

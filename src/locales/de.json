@@ -15,7 +15,7 @@
   "home": {
     "headline": "Hallo, ich bin Timo Achtelik",
     "subline": "Lead Software Engineer & Freelancer für Webentwicklung und technische Beratung",
-    "freelanceKeywords": "Vibe Coding, Codebase-Cleanup-Spezialist, Legacy-Cleanup und pragmatisches Refactoring für langfristige Wartbarkeit.",
+    "freelanceKeywords": "Codebase-Modernisierung, Legacy-Refactoring und pragmatische Architektur für langfristige Wartbarkeit.",
     "applicationHeadline": "Hallo, ich bin Timo Achtelik",
     "applicationSubline": "Lead Software Engineer mit Fokus auf moderne Web-Plattformen und skalierbare Systeme",
     "cta": {
@@ -24,7 +24,12 @@
     },
     "references": {
       "title": "Referenzen",
-      "subtitle": "Ausgewählte Projekte und Ergebnisse aus der jüngsten Zusammenarbeit."
+      "subtitle": "Ausgewählte Projekte und Ergebnisse aus der jüngsten Zusammenarbeit.",
+      "items": {
+        "recipeHub": {
+          "description": "Persönliches Full-Stack-Projekt rund um Rezepte, Entdecken-Funktion und Einkaufslisten."
+        }
+      }
     },
     "skills": {
       "headline": "Fähigkeiten"
@@ -47,13 +52,13 @@
       "skill_architecture": "Software- & Systemarchitekturplanung",
       "skill_reviews": "Code-Reviews & Qualitätssicherung",
       "skill_tech_selection": "Auswahl und Bewertung des Technologie-Stacks",
-      "skill_vibe_coding": "Vibe Coding für strukturierte Entscheidungen",
+      "skill_ai_assisted": "Einführung von AI-assisted Development (z.B. Claude Code, GitHub Copilot)",
       "skill_seo": "Technische SEO-Audits & -Optimierung"
     },
     "modernization": {
       "title": "Modernisierung von Altsystemen",
       "description": "Ich hauche älteren Anwendungen neues Leben ein, indem ich sie auf moderne Technologiestacks migriere und so Leistung, Sicherheit und Wartbarkeit verbessere.",
-      "skill_analysis": "Analyse bestehender Altsysteme (z.B. AngularJS)",
+      "skill_analysis": "Analyse bestehender Altsysteme und Legacy-Frontends",
       "skill_migration": "Schrittweise Migrationsstrategien zu Vue.js oder Nuxt.js",
       "skill_refactoring": "Codebase-Refactoring für bessere Lesbarkeit",
       "skill_integration": "Integration mit modernen APIs und Diensten"
@@ -193,7 +198,7 @@
       "content2": "Mein Werdegang ist geprägt von Lernbereitschaft und dem Willen zu wachsen. Innerhalb eines Jahres wurde ich vom Junior zum Lead Developer befördert – ein Beweis für meine Fähigkeit, neue Technologien schnell zu meistern und Ergebnisse zu liefern. Ich bringe ein gut ausgeprägtes, modernes Skillset mit, kombiniert mit hohem Verantwortungs- und Qualitätsbewusstsein für jedes Projekt.",
       "applicationContent1": "In meiner Arbeit entsteht gute Software selten durch einzelne starke Features, sondern durch klare Strukturen, saubere Schnittstellen und bewusste Entscheidungen über Zeit. Ich lege Wert darauf, dass Systeme verständlich bleiben – auch für Entwickler, die Monate später dazukommen.",
       "applicationContent2": "Ich arbeite gern an komplexen Systemen, aber nicht an komplizierten. Wenn Architekturentscheidungen anstehen, treffe ich sie so, dass sie Spielraum lassen, statt neue Abhängigkeiten zu schaffen. Qualität heißt für mich Wartbarkeit unter realen Bedingungen.",
-      "applicationContent3": "Seit rund einem Jahr setze ich Vibe Coding gezielt ein: um Denkprozesse zu strukturieren, Optionen zu vergleichen und Entscheidungen nachvollziehbar zu machen. Ich suche eine Aufgabe, in der ich über reine Umsetzung hinaus mitgestalten kann – technisch, strukturell und im Austausch mit anderen Entwicklern."
+      "applicationContent3": "Als AI Ambassador bei BAYOOTEC begleite ich die Einführung von AI-assisted Development in unseren Engineering-Teams – unter anderem mit Claude Code und GitHub Copilot. Dabei lege ich Wert darauf, dass technische Entscheidungen nachvollziehbar bleiben und Werkzeuge dort eingesetzt werden, wo sie messbaren Nutzen bringen. Ich suche eine Aufgabe, in der ich über reine Umsetzung hinaus mitgestalten kann – technisch, strukturell und im Austausch mit anderen Entwicklern."
     },
     "experience": {
       "title": "Berufserfahrung",
@@ -248,7 +253,7 @@
         "degree": "Ausbildung zum Fachinformatiker Anwendungsentwicklung",
         "school": "Sage Software GmbH",
         "period": "2014 - 2016",
-        "description": "Erlangung grundlegender Fähigkeiten in der Webentwicklung mit HTML, CSS und AngularJS bei der Arbeit am Produkt 'Sage Office Online'."
+        "description": "Erlangung grundlegender Fähigkeiten in der Webentwicklung mit HTML, CSS und JavaScript bei der Arbeit am Produkt 'Sage Office Online'."
       },
       "edu5": {
         "degree": "Jahrespraktikum im Bereich IT",
