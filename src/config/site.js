@@ -27,7 +27,13 @@ export const SITE_CONFIG = {
   contactEmails,
   cvUrl: cvUrls.de,
   cvUrls,
-  portraitSrc: new URL('../assets/portrait.jpg', import.meta.url).href,
+  portraitSrc: new URL('../assets/portrait-384.jpg', import.meta.url).href,
+  portraitSources: {
+    avif: new URL('../assets/portrait-384.avif', import.meta.url).href,
+    webp: new URL('../assets/portrait-384.webp', import.meta.url).href,
+  },
+  portraitWidth: 384,
+  portraitHeight: 514,
   portraitAlt: 'Portrait of Timo Achtelik',
   profiles: [
     {
@@ -43,7 +49,7 @@ export const SITE_CONFIG = {
     {
       title: 'Recipe Hub',
       descriptionKey: 'home.references.items.recipeHub.description',
-      imageSrc: 'https://image.thum.io/get/width/1200/https://recipe-hub.timo-achtelik.de/',
+      imageSrc: new URL('../assets/references/recipe-hub.webp', import.meta.url).href,
       url: 'https://recipe-hub.timo-achtelik.de/',
     },
   ],

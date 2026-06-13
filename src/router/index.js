@@ -1,18 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Services from '../views/Services.vue'
-import About from '../views/About.vue'
-import Contact from '../views/Contact.vue'
-import Imprint from '../views/Imprint.vue'
-import Privacy from '../views/Privacy.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/services', component: Services },
-  { path: '/about', component: About },
-  { path: '/contact', component: Contact },
-  { path: '/impressum', component: Imprint },
-  { path: '/datenschutz', component: Privacy },
+  { path: '/services', component: () => import('../views/Services.vue') },
+  { path: '/about', component: () => import('../views/About.vue') },
+  { path: '/contact', component: () => import('../views/Contact.vue') },
+  { path: '/impressum', component: () => import('../views/Imprint.vue') },
+  { path: '/datenschutz', component: () => import('../views/Privacy.vue') },
 ]
 
 export default createRouter({

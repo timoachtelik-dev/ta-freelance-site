@@ -12,12 +12,18 @@
             <div class="md:w-1/3 flex justify-center mb-6 md:mb-0">
               <div class="relative w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-primary">
                 <div class="absolute inset-0 bg-gradient-to-br from-primary to-accent"></div>
-                <img
-                  v-if="portraitSrc"
-                  :src="portraitSrc"
-                  :alt="portraitAlt"
-                  class="absolute inset-0 w-full h-full object-cover object-[0%_0%]"
-                />
+                <picture v-if="portraitSrc">
+                  <source :srcset="portraitSources.avif" type="image/avif" />
+                  <source :srcset="portraitSources.webp" type="image/webp" />
+                  <img
+                    :src="portraitSrc"
+                    :alt="portraitAlt"
+                    :width="portraitWidth"
+                    :height="portraitHeight"
+                    loading="lazy"
+                    class="absolute inset-0 w-full h-full object-cover object-[0%_0%]"
+                  />
+                </picture>
                 <div v-else class="absolute inset-0 flex items-center justify-center text-4xl font-bold text-background">TA</div>
               </div>
             </div>
@@ -104,6 +110,9 @@ onMounted(() => {
 // Computed properties to access localized data
 const isApplicationMode = SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION;
 const portraitSrc = SITE_CONFIG.portraitSrc;
+const portraitSources = SITE_CONFIG.portraitSources;
+const portraitWidth = SITE_CONFIG.portraitWidth;
+const portraitHeight = SITE_CONFIG.portraitHeight;
 const portraitAlt = SITE_CONFIG.portraitAlt;
 
 const introContent1 = computed(() =>
