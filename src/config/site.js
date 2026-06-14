@@ -4,8 +4,8 @@ export const PROFILE_MODES = {
 };
 
 const cvUrls = {
-  de: new URL('../assets/CV_Achtelik_Timo_de.pdf', import.meta.url).href,
-  en: new URL('../assets/CV_Achtelik_Timo_en.pdf', import.meta.url).href,
+  de: new URL('../assets/CV_Timo_Achtelik_de.pdf', import.meta.url).href,
+  en: new URL('../assets/CV_Timo_Achtelik_en.pdf', import.meta.url).href,
 };
 
 export const getCvUrlForLocale = (locale = 'de') => cvUrls[locale] || cvUrls.de;
