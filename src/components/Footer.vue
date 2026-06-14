@@ -56,9 +56,14 @@
                   {{ $t('nav.contact') }}
                 </router-link>
               </li>
+              <li>
+                <router-link to="/insights" class="text-sm text-primary dark:text-accent hover:text-highlight dark:hover:text-highlight transition-colors duration-200">
+                  {{ $t('nav.insights') }}
+                </router-link>
+              </li>
             </ul>
           </div>
-  
+
           <!-- Legal links -->
           <div>
             <h3 class="text-sm font-semibold text-secondary dark:text-background uppercase tracking-wider mb-4">

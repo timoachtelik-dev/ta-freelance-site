@@ -4,6 +4,7 @@
     "services": "Leistungen",
     "about": "Über mich",
     "contact": "Kontakt",
+    "insights": "Insights",
     "focusAreas": "Schwerpunkte",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
@@ -41,6 +42,25 @@
     "datenschutz": {
       "title": "Timo Achtelik – Lead Software Engineer {'|'} Datenschutz",
       "description": "Datenschutzerklärung der Website von Timo Achtelik."
+    },
+    "insights": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Insights",
+      "description": "Praxisnotizen zum Rollout von AI-assisted Development in einem Enterprise-Softwarehaus – was funktioniert hat und was nicht."
+    }
+  },
+  "insights": {
+    "kicker": "Insights",
+    "article": {
+      "title": "Rollout von AI-assisted Development in einem Enterprise-Softwarehaus – was funktioniert hat",
+      "lead": "Als AI Ambassador habe ich die Einführung von AI-assisted Development in mehreren Engineering-Teams begleitet. Dieser erste Erfahrungsbericht fasst zusammen, was in der Praxis getragen hat – und was nicht.",
+      "s1Title": "Werkzeuge sind der einfache Teil",
+      "s1Body": "Claude Code und GitHub Copilot waren schnell ausgerollt. Der eigentliche Hebel lag nicht in der Lizenz, sondern in klaren Leitplanken: Wofür eignen sich die Werkzeuge, wofür nicht, und wie bleiben Entscheidungen nachvollziehbar? Ohne diesen Rahmen entstehen schnell viel Code und wenig Verständnis.",
+      "s2Title": "Review-Kultur wird wichtiger, nicht unwichtiger",
+      "s2Body": "Mit AI-Unterstützung steigt die Menge an generiertem Code. Damit verschiebt sich der Engpass von der Erstellung zum Review. Teams, die ihre Review-Standards vorher geschärft haben, profitierten am meisten; wo Reviews vorher schon oberflächlich waren, verstärkten die Werkzeuge das Problem.",
+      "s3Title": "Kontext schlagen Prompts",
+      "s3Body": "Der Unterschied zwischen frustrierenden und produktiven Sessions lag selten an cleveren Prompts, sondern an gutem Kontext: saubere Codebasis, dokumentierte Konventionen, klar abgegrenzte Aufgaben. AI-Werkzeuge belohnen genau die Qualitäten, die ohnehin guten Code ausmachen.",
+      "s4Title": "Was ich beim nächsten Mal anders mache",
+      "s4Body": "Früher messen statt nur ausrollen: konkrete Vorher-Nachher-Metriken zu Durchlaufzeit und Review-Aufwand. Und stärker zwischen Rollen differenzieren – Junior- und Senior-Entwickler brauchen unterschiedliche Begleitung, um den Werkzeugen zu vertrauen, ohne ihnen blind zu folgen."
     }
   },
   "home": {

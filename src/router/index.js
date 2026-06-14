@@ -8,6 +8,7 @@ export const routes = [
   { path: '/services', component: () => import('../views/Services.vue'), meta: { seoKey: 'services' } },
   { path: '/about', component: () => import('../views/About.vue'), meta: { seoKey: 'about' } },
   { path: '/contact', component: () => import('../views/Contact.vue'), meta: { seoKey: 'contact' } },
+  { path: '/insights', component: () => import('../views/Insights.vue'), meta: { seoKey: 'insights' } },
   { path: '/impressum', component: () => import('../views/Imprint.vue'), meta: { seoKey: 'impressum' } },
   { path: '/datenschutz', component: () => import('../views/Privacy.vue'), meta: { seoKey: 'datenschutz' } },
 ]

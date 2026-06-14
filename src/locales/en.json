@@ -4,6 +4,7 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
+    "insights": "Insights",
     "focusAreas": "Focus Areas",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -41,6 +42,25 @@
     "datenschutz": {
       "title": "Timo Achtelik – Lead Software Engineer {'|'} Privacy",
       "description": "Privacy policy for Timo Achtelik's website."
+    },
+    "insights": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Insights",
+      "description": "Field notes on rolling out AI-assisted development in an enterprise software company – what worked and what didn't."
+    }
+  },
+  "insights": {
+    "kicker": "Insights",
+    "article": {
+      "title": "Rolling out AI-assisted development in an enterprise software company – what worked",
+      "lead": "As AI Ambassador I helped introduce AI-assisted development across several engineering teams. This first field report sums up what held up in practice – and what didn't.",
+      "s1Title": "The tools are the easy part",
+      "s1Body": "Claude Code and GitHub Copilot were rolled out quickly. The real leverage wasn't the license but clear guardrails: where the tools fit, where they don't, and how decisions stay traceable. Without that frame you quickly get a lot of code and little understanding.",
+      "s2Title": "Review culture matters more, not less",
+      "s2Body": "With AI assistance the volume of generated code goes up, which shifts the bottleneck from writing to reviewing. Teams that had sharpened their review standards beforehand benefited the most; where reviews were already shallow, the tools amplified the problem.",
+      "s3Title": "Context beats prompts",
+      "s3Body": "The difference between frustrating and productive sessions rarely came down to clever prompts, but to good context: a clean codebase, documented conventions, clearly scoped tasks. AI tools reward exactly the qualities that make for good code anyway.",
+      "s4Title": "What I'd do differently next time",
+      "s4Body": "Measure earlier instead of just rolling out: concrete before/after metrics on cycle time and review effort. And differentiate more by role – junior and senior engineers need different support to trust the tools without following them blindly."
     }
   },
   "home": {
