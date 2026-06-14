@@ -53,17 +53,43 @@
       "cv": "Lebenslauf ansehen (PDF)",
       "linkedin": "LinkedIn"
     },
-    "references": {
-      "title": "Referenzen",
-      "subtitle": "Ausgewählte Projekte und Ergebnisse aus der jüngsten Zusammenarbeit.",
+    "projects": {
+      "title": "Ausgewählte Projekte",
+      "subtitle": "Anonymisierte Einblicke in Projekte, die meine Arbeitsweise zeigen.",
+      "viewProject": "Projekt ansehen",
       "items": {
+        "healthcare": {
+          "title": "Enterprise-Healthcare-SaaS",
+          "role": "Lead / Technical Bridge",
+          "description": "Klinisches Workflow-Management für einen Healthcare-Anbieter. Ich verantwortete zentrale Frontend- und Backend-Module und war technische Brücke zwischen Produkt, Fachbereich und Entwicklung. Ergebnis: stabilere Release-Zyklen und eine wartbarere Codebasis für ein langlebiges Produkt.",
+          "stack": "Angular · Node.js · TypeScript"
+        },
+        "ecommerce": {
+          "title": "E-Commerce-Produktkatalog (10.000+ Artikel)",
+          "role": "Full-Stack-Entwicklung",
+          "description": "Produktkatalog mit über 10.000 Artikeln und kritischen Ladezeitproblemen. Ich führte Server-Side Rendering, Skeleton-UI und Infinite Scroll ein und optimierte die Datenabrufe. Ergebnis: deutlich schnellere Initialdarstellung und flüssiges Browsing auch bei großen Datenmengen.",
+          "stack": "Next.js · React · TypeScript"
+        },
         "recipeHub": {
-          "description": "Persönliches Full-Stack-Projekt rund um Rezepte, Entdecken-Funktion und Einkaufslisten."
+          "title": "Recipe Hub",
+          "role": "Persönliches Full-Stack-Projekt",
+          "description": "Eigenes Full-Stack-Projekt rund um Rezepte, eine Entdecken-Funktion und Einkaufslisten. Von Datenmodell über API bis Frontend eigenständig umgesetzt – als Spielwiese für moderne Patterns und saubere Architektur.",
+          "stack": "Next.js · React · TypeScript"
         }
       }
     },
     "skills": {
-      "headline": "Fähigkeiten"
+      "headline": "Fähigkeiten",
+      "items": {
+        "angular": { "context": "Täglicher Haupt-Stack im Enterprise-Healthcare-Projekt." },
+        "vue": { "context": "Frontend-Framework dieser Website und mehrerer Kundenprojekte." },
+        "typescript": { "context": "Standard für typsichere Front- und Backends." },
+        "node": { "context": "Backend-Services und APIs, ergänzt um C#/.NET." },
+        "postgres": { "context": "Relationale Datenmodellierung und Abfrageoptimierung." },
+        "docker": { "context": "Containerisierung für reproduzierbare Deployments." },
+        "architecture": { "context": "Skalierbare, wartbare Strukturen über Teamgrenzen hinweg." },
+        "agile": { "context": "Scrum-Praxis in cross-funktionalen Produktteams." }
+      }
     }
   },
    "services": {
@@ -255,15 +281,15 @@
         "job4": {
           "title": "Werkstudent Softwareentwicklung",
           "company": "BAYOONET AG",
-          "period": "2017 - 2023",
-          "description": "Über fast sieben Jahre hinweg wirkte ich an einer Vielzahl von Web- und On-Premise-Projekten mit. Diese langfristige Position ermöglichte es mir, ein vielseitiger Entwickler zu werden und verschiedenste Technologien wie C#/.NET, Vue.js, Angular.js und Kendo.UI einzusetzen, was die Grundlage für meine Full-Stack-Expertise legte."
+          "period": "Feb 2017 - Okt 2023",
+          "description": "Über mehr als sechs Jahre war ich vollwertiges Mitglied in Kundenprojekten und verantwortete eigenständig Features und Teilprojekte – darunter ein Mobility-Abrechnungssystem und ein E-Commerce-Produktkatalog mit über 10.000 Artikeln. Dabei arbeitete ich mit C#/.NET, Vue.js, Angular und Kendo UI und legte so die Grundlage für meine heutige Full-Stack-Expertise."
         }
       }
     },
     "education": {
       "title": "Ausbildung & Früher Werdegang",
       "edu1": {
-        "degree": "M.Sc. Informatik (Software Engineering)",
+        "degree": "M.Sc. Software Engineering",
         "school": "Hochschule Darmstadt",
         "period": "2020 - 2023",
         "description": "Masterstudium mit Fokus auf fortgeschrittene Softwarearchitektur, Systementwicklung und moderne Prinzipien des Software Engineerings."
@@ -275,7 +301,7 @@
         "description": "Ein Semester in Edmonton zu leben und zu studieren war eine prägende Erfahrung. Ich habe eine neue Kultur kennengelernt, meinen Horizont erweitert und viele unvergessliche Momente mitgenommen."
       },
       "edu3": {
-        "degree": "B.Sc. Informatik (Kommunikation & Medien)",
+        "degree": "B.Sc. Informatik – Kommunikation und Medien",
         "school": "Hochschule Darmstadt",
         "period": "2016 - 2020",
         "description": "Bachelorstudium, das eine starke technische IT-Grundlage mit Mediengestaltung und benutzerzentrierten Kommunikationskonzepten verband."

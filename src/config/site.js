@@ -50,12 +50,11 @@ export const SITE_CONFIG = {
       url: 'https://www.xing.com/profile/Timo_Achtelik2/web_profiles',
     },
   ],
-  references: [
-    {
-      title: 'Recipe Hub',
-      descriptionKey: 'home.references.items.recipeHub.description',
-      imageSrc: new URL('../assets/references/recipe-hub.webp', import.meta.url).href,
-      url: 'https://recipe-hub.timo-achtelik.de/',
-    },
+  // "Ausgewählte Projekte" case studies. Text comes from the locales
+  // (home.projects.items.<key>); only structural data lives here.
+  projects: [
+    { key: 'healthcare', barClass: 'bg-accent' },
+    { key: 'ecommerce', barClass: 'bg-highlight' },
+    { key: 'recipeHub', barClass: 'bg-primary', url: 'https://recipe-hub.timo-achtelik.de/' },
   ],
 };

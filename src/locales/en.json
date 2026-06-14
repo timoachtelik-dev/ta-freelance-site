@@ -53,18 +53,44 @@
       "cv": "View CV (PDF)",
       "linkedin": "LinkedIn"
     },
-    "references": {
-      "title": "References",
-      "subtitle": "Selected work and outcomes from recent projects.",
+    "projects": {
+      "title": "Selected Projects",
+      "subtitle": "Anonymized glimpses into projects that show how I work.",
+      "viewProject": "View project",
       "items": {
+        "healthcare": {
+          "title": "Enterprise Healthcare SaaS",
+          "role": "Lead / Technical Bridge",
+          "description": "Clinical workflow management for a healthcare provider. I owned core frontend and backend modules and acted as the technical bridge between product, domain experts, and engineering. Outcome: more stable release cycles and a more maintainable codebase for a long-lived product.",
+          "stack": "Angular · Node.js · TypeScript"
+        },
+        "ecommerce": {
+          "title": "E-Commerce Product Catalog (10,000+ items)",
+          "role": "Full-Stack Development",
+          "description": "Product catalog with 10,000+ items and critical load-time problems. I introduced server-side rendering, skeleton UI, and infinite scroll, and optimized data fetching. Outcome: significantly faster initial render and smooth browsing even with large data sets.",
+          "stack": "Next.js · React · TypeScript"
+        },
         "recipeHub": {
-          "description": "Personal full-stack project showcasing recipes, discovery, and shopping lists."
+          "title": "Recipe Hub",
+          "role": "Personal Full-Stack Project",
+          "description": "My own full-stack project around recipes, a discovery feature, and shopping lists. Built end to end from data model to API to frontend – as a playground for modern patterns and clean architecture.",
+          "stack": "Next.js · React · TypeScript"
         }
       }
     },
     "skills": {
       "headline": "Skills",
-      "vue": "Vue.js"
+      "vue": "Vue.js",
+      "items": {
+        "angular": { "context": "Daily main stack in the enterprise healthcare project." },
+        "vue": { "context": "Frontend framework of this site and several client projects." },
+        "typescript": { "context": "Default for type-safe front- and backends." },
+        "node": { "context": "Backend services and APIs, complemented by C#/.NET." },
+        "postgres": { "context": "Relational data modeling and query optimization." },
+        "docker": { "context": "Containerization for reproducible deployments." },
+        "architecture": { "context": "Scalable, maintainable structures across teams." },
+        "agile": { "context": "Scrum practice in cross-functional product teams." }
+      }
     }
   },
   "services": {
@@ -256,15 +282,15 @@
         "job4": {
           "title": "Working Student Developer",
           "company": "BAYOONET AG",
-          "period": "2017 - 2023",
-          "description": "For nearly seven years, I contributed to a wide range of web and on-premise projects. This long-term role allowed me to become a versatile developer, using diverse technologies like C#/.NET, Vue.js, Angular.js, and Kendo.UI, laying the foundation for my full-stack expertise."
+          "period": "Feb 2017 - Oct 2023",
+          "description": "For more than six years I was a full member of client project teams, independently owning features and sub-projects – among them a mobility billing system and an e-commerce product catalog with 10,000+ items. I worked with C#/.NET, Vue.js, Angular, and Kendo UI, laying the foundation for my full-stack expertise today."
         }
       }
     },
     "education": {
       "title": "Education & Early Career",
       "edu1": {
-        "degree": "M.Sc. Computer Science (Software Engineering)",
+        "degree": "M.Sc. Software Engineering",
         "school": "University of Applied Sciences Darmstadt",
         "period": "2020 - 2023",
         "description": "Master's degree focused on advanced software architecture, system development, and modern software engineering principles."
@@ -276,7 +302,7 @@
         "description": "Spending a semester living and studying in Edmonton was a memorable experience. Beyond the 7.5 credit points, I got to explore a new culture, meet people from all over the world, and broaden my perspective in ways that stayed with me long after."
       },
       "edu3": {
-        "degree": "B.Sc. Computer Science (Communication & Media)",
+        "degree": "B.Sc. Informatik – Kommunikation und Medien",
         "school": "University of Applied Sciences Darmstadt",
         "period": "2016 - 2020",
         "description": "Bachelor's degree combining a strong IT foundation with media design and user-centered communication concepts."
