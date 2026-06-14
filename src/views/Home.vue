@@ -143,24 +143,6 @@ export default {
       return SITE_CONFIG.references || [];
     },
   },
-   mounted() {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://profile.timo-achtelik.de/",
-      "name": "Timo Achtelik",
-      "author": {
-        "@type": "Person",
-        "name": "Timo Achtelik"
-      },
-      "description": "Freelancer for Web Development & Technical Consulting"
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
-  },
   data() {
     return {
       skills: [

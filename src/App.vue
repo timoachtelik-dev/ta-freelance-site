@@ -11,69 +11,80 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import { watch } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { SITE_CONFIG, PROFILE_MODES } from './config/site';
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
+import { SITE_CONFIG } from './config/site'
 
-const applyDocumentTitle = (title) => {
-  if (!title) {
-    return;
-  }
-  document.title = title;
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) {
-    ogTitle.setAttribute('content', title);
-    return;
-  }
+// Static Person schema (3.4): rendered into every prerendered page so the
+// crawler sees it without executing JS. Language-neutral, so not localized.
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Timo Achtelik',
+  jobTitle: 'Lead Software Engineer',
+  worksFor: { '@type': 'Organization', name: 'BAYOOTEC GmbH' },
+  url: SITE_CONFIG.siteOrigin,
+  sameAs: [
+    'https://www.linkedin.com/in/timo-achtelik-112b2127a/',
+    'https://www.xing.com/profile/Timo_Achtelik2/web_profiles',
+    'https://github.com/timoachtelik-dev',
+  ],
+  knowsAbout: ['Angular', 'Vue.js', 'TypeScript', 'Node.js'],
+}
 
-  const meta = document.createElement('meta');
-  meta.setAttribute('property', 'og:title');
-  meta.setAttribute('content', title);
-  document.head.appendChild(meta);
-};
-
-const getTitleKey = () => (
-  SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION
-    ? 'meta.title.application'
-    : 'meta.title.freelance'
-);
 export default {
   components: { Navbar, Footer },
   data() {
-    return { 
-      darkMode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches 
-    }
+    // SSR-safe default; the real preference is applied client-side in mounted().
+    return { darkMode: false }
   },
   setup() {
-    const { locale, t } = useI18n();
+    const { t, locale } = useI18n()
+    const route = useRoute()
+    const origin = SITE_CONFIG.siteOrigin
 
-    const updateMeta = () => {
-      const title = t(getTitleKey());
-      applyDocumentTitle(title);
-    };
+    const seoKey = computed(() => route.meta?.seoKey || 'home')
+    const title = computed(() => t(`seo.${seoKey.value}.title`))
+    const description = computed(() => t(`seo.${seoKey.value}.description`))
+    const url = computed(() => origin + (route.path === '/' ? '/' : route.path))
 
-    watch(locale, (newLocale) => {
-      document.documentElement.lang = newLocale;
-      updateMeta();
-    }, { immediate: true });
+    useHead({
+      title,
+      htmlAttrs: { lang: locale },
+      meta: [
+        { name: 'description', content: description },
+        { property: 'og:title', content: title },
+        { property: 'og:description', content: description },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: url },
+        { property: 'og:image', content: `${origin}/social-preview.jpg` },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+      link: [{ rel: 'canonical', href: url }],
+      script: [
+        { type: 'application/ld+json', innerHTML: JSON.stringify(personSchema) },
+      ],
+    })
   },
   methods: {
     toggleTheme() {
-      this.darkMode = !this.darkMode;
-    }
+      this.darkMode = !this.darkMode
+    },
   },
   mounted() {
-    // Check for user preference in localStorage
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('theme')
     if (savedTheme) {
-      this.darkMode = savedTheme === 'dark';
+      this.darkMode = savedTheme === 'dark'
+    } else if (window.matchMedia) {
+      this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
     }
   },
   watch: {
     darkMode(newValue) {
-      // Save preference to localStorage
-      localStorage.setItem('theme', newValue ? 'dark' : 'light');
-    }
-  }
+      localStorage.setItem('theme', newValue ? 'dark' : 'light')
+    },
+  },
 }
 </script>

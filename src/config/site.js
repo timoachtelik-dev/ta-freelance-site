@@ -20,9 +20,14 @@ const contactEmails = {
 };
 const resolvedContactEmail = contactEmails[resolvedProfileMode] || contactEmails[PROFILE_MODES.FREELANCE];
 
+const siteOrigin = (import.meta.env && import.meta.env.VITE_SITE_ORIGIN) || 'https://profile.timo-achtelik.de';
+
 export const SITE_CONFIG = {
   // Switch between PROFILE_MODES.FREELANCE and PROFILE_MODES.APPLICATION.
   profileMode: resolvedProfileMode,
+  // Canonical origin used for SEO meta (og:url, canonical, JSON-LD). Override
+  // per build with VITE_SITE_ORIGIN; defaults to the live profile domain.
+  siteOrigin,
   contactEmail: resolvedContactEmail,
   contactEmails,
   cvUrl: cvUrls.de,

@@ -17,6 +17,32 @@
       "application": "Timo Achtelik - Lead Software Engineer"
     }
   },
+  "seo": {
+    "home": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Frankfurt – Angular, Vue.js, TypeScript",
+      "description": "Lead Software Engineer aus Frankfurt – Angular, Vue.js, TypeScript und Node.js. Webentwicklung, Architektur und Modernisierung von Anwendungen."
+    },
+    "services": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Leistungen",
+      "description": "Full-Stack-Webentwicklung, technische Beratung, Legacy-Modernisierung und DevOps – pragmatische Lösungen mit Angular, Vue.js, TypeScript und Node.js."
+    },
+    "about": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Über mich",
+      "description": "Lead Software Engineer bei BAYOOTEC. Werdegang vom Werkstudenten zum Lead, Schwerpunkte Angular, Vue.js, TypeScript und nachhaltige Architektur."
+    },
+    "contact": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Kontakt",
+      "description": "Kontakt zu Timo Achtelik, Lead Software Engineer aus Frankfurt – für Projekte, Zusammenarbeit und technische Beratung."
+    },
+    "impressum": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Impressum",
+      "description": "Impressum und Anbieterkennzeichnung der Website von Timo Achtelik."
+    },
+    "datenschutz": {
+      "title": "Timo Achtelik – Lead Software Engineer {'|'} Datenschutz",
+      "description": "Datenschutzerklärung der Website von Timo Achtelik."
+    }
+  },
   "home": {
     "headline": "Hallo, ich bin Timo Achtelik",
     "subline": "Lead Software Engineer & Freelancer für Webentwicklung und technische Beratung",

@@ -7,8 +7,10 @@
 Diese Website wurde mit modernem Tech-Stack umgesetzt:
 
 - **Vue 3** mit Composition API & Vite
+- **vite-ssg**: statisches Pre-Rendering (SSG) pro Route für SEO
 - **Tailwind CSS** (inkl. Dark Mode)
 - **Vue Router** & **vue-i18n** (DE & EN)
+- **@unhead/vue** für per-Route Meta (Title, Description, Open Graph, JSON-LD)
 - Vollständig responsive & SEO-freundlich
 
 Ziel: Klare Präsentation meiner Leistungen im Bereich **Webentwicklung**, **technische Beratung** und **Agile Projektarbeit**.
@@ -34,10 +36,34 @@ npm run dev
 
 ## 🏗️ Build & Preview
 
+`npm run build` nutzt **vite-ssg** und erzeugt statisches HTML pro Route
+(`dist/index.html`, `dist/about.html`, …). Deep-Links liefern damit echten
+Inhalt für Crawler.
+
 ```bash
 npm run build
 npm run preview
 ```
+
+### Generierte Assets neu erzeugen
+
+```bash
+npm run fonts:sync       # Inter-woff2 aus @fontsource/inter nach public/fonts/
+npm run images:optimize  # portrait-384 avif/webp/jpg aus src/assets/portrait.jpg
+npm run og:generate      # public/social-preview.jpg (1200×630 OG-Bild)
+```
+
+## 🔎 SEO / Google Search Console
+
+Nach jedem Deploy mit geänderten Routen/Inhalten **manuell**:
+
+1. `sitemap.xml` (liegt in `public/`, URLs auf `https://profile.timo-achtelik.de`)
+   in der [Google Search Console](https://search.google.com/search-console)
+   einreichen.
+2. Über „URL-Prüfung" die Startseite und geänderte Unterseiten zur
+   **Indexierung anfordern**.
+3. Mit dem [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
+   das OG-Preview (`/social-preview.jpg`) prüfen.
 
 ## ✉️ Kontaktformular (Resend + Turnstile)
 

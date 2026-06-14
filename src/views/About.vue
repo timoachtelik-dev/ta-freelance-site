@@ -79,7 +79,7 @@
   </div>
 </template>
 <script setup>
-import { computed, onMounted } from 'vue';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { SITE_CONFIG, PROFILE_MODES } from '../config/site';
 
@@ -88,24 +88,8 @@ const { t } = useI18n({
   useScope: 'global'
 });
 
-onMounted(() => {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Timo Achtelik",
-      "url": "https://profile.timo-achtelik.de/about",
-      "jobTitle": "Freelance Software Engineer & Technical Consultant",
-      "sameAs": [
-        "https://www.xing.com/profile/Timo_Achtelik2/web_profiles"
-        // Add other profiles like LinkedIn, GitHub, etc.
-      ]
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
-});
+// The Person JSON-LD now lives statically in App.vue (rendered into every
+// prerendered page), so it is no longer injected client-side here.
 
 // Computed properties to access localized data
 const isApplicationMode = SITE_CONFIG.profileMode === PROFILE_MODES.APPLICATION;
